@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
+import banner from '../public/banner/banner-main.png'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,8 +18,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className='flex justify-center items-center h-screen px-48'>
-        <p className='text-blue-700 text-3xl'>Hello world</p>
+      <main className='h-screen w-full  bg-[#FF8FB1]'>
+        <div className='relative'>
+          <Image src={banner} alt='banner da pagina principal' className='h-[calc(100vh-208px)] w-full' />
+          <h1 className='absolute text-black text-[55px] top-[25%] left-[10%] translate-y-[50%] font-kalam'>Uma confeitaria que traz a magia da felicidade <br />
+            <span className='ml-80'>para adoçar seu dia!</span> </h1>
+        </div>
       </main>
       <Footer />
     </>

@@ -7,12 +7,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        
+        primaryPurple: {
+          default: '#8c52f',
+        },
       },
       fontFamily: {
-        kalam: ['Kalam', "cursive"],
-      }
+        kalam: ['Kalam', 'cursive'],
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')({ nocompatible: true })],
 };

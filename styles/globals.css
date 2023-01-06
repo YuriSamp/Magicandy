@@ -3,6 +3,11 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 
+@layer base {
+  body {
+    @apply !scrollbar !scrollbar-track-slate-200 !scrollbar-thumb-[#8c52ff] scrollbar-thumb-rounded-md;
+  }
+}
 
 * {
   box-sizing: border-box;

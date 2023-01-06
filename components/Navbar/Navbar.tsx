@@ -1,21 +1,23 @@
+import Image from 'next/image';
 import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import logo from '../../public/logo.svg'
 
 
-const Navbar = (props:any) => {
+const Navbar = (props: any) => {
 
     return (
         <>
-            <nav className="flex px-48 py-5 border-b-2 items-center justify-between">
+            <nav className="flex flex-col lg:flex-row lg:px-48 gap-8 lg:gap-0  py-5 border-b-2 border-[#8c52ff] items-center justify-between bg-[#FCE2DB]">
                 <a href="#">
-                <img className="w-[200px]" src="https://http.cat/402" alt="Logo da Confeitaria Magicandy." />
+                    <Image className="w-[200px]" src={logo} alt="Logo da Confeitaria Magicandy." />
                 </a>
-                <ul className="flex gap-5 font-kalam text-xl">
-                    <li><Link href="#">Home</Link></li>
-                    <li><Link href="#">Produtos</Link></li>
-                    <li><Link href="#">Contato</Link></li>
+                <ul className="flex gap-16 font-kalam text-xl">
+                    <li><Link href="#" className='text-[#8c52ff] text-2xl' >Home</Link></li>
+                    <li><Link href="#" className='text-[#8c52ff] text-2xl' >Produtos</Link></li>
+                    <li><Link href="#" className='text-[#8c52ff] text-2xl' >Contato</Link></li>
                     <li>
-                        <Link href="#" className="flex items-center gap-2"><AiOutlineShoppingCart />Carrinho</Link>
+                        <Link href="#" className="flex items-center gap-2 text-[#8c52ff] text-2xl"><AiOutlineShoppingCart />Carrinho</Link>
                     </li>
                 </ul>
             </nav>
