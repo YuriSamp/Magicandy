@@ -8,7 +8,7 @@ const Navbar = (props: any) => {
 
     return (
         <>
-            <nav className="flex flex-col lg:flex-row lg:px-48 gap-8 lg:gap-0  py-5 border-b-2 border-[#8c52ff] items-center justify-between bg-[#FCE2DB]">
+            <nav className="flex flex-col lg:flex-row lg:px-48 gap-8 lg:gap-0  py-5 border-b-2 border-[#8c52ff] items-center justify-between bg-[#f8f8ff]">
                 <a href="#">
                     <Image className="w-[200px]" src={logo} alt="Logo da Confeitaria Magicandy." />
                 </a>

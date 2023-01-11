@@ -4,11 +4,13 @@ import { Inter } from '@next/font/google'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 import banner from '../public/banner/banner-main.png'
-
+import Card from '../components/Card/Card'
+import db from '../data/db.json'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  
   return (
     <>
       <Head>
@@ -18,12 +20,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className='h-screen w-full  bg-[#FF8FB1]'>
+      <main className='min-h-screen w-full  bg-[#FF8FB1]'>
         <div className='relative'>
           <Image src={banner} alt='banner da pagina principal' className='h-[calc(100vh-208px)] w-full' />
-          <h1 className='absolute text-black text-[55px] top-[25%] left-[10%] translate-y-[50%] font-kalam'>Uma confeitaria que traz a magia da felicidade <br />
+          <h1 className='absolute text-pink-800 text-[55px] top-[25%] left-[10%] translate-y-[50%] font-kalam'>Uma confeitaria que traz a magia da felicidade <br />
             <span className='ml-80'>para adoçar seu dia!</span> </h1>
         </div>
+        <section className="flex text-black flex-col md:flex-row lg:px-48 gap-16 md:gap-8 px-16 py-16 border-b-2 border-[#8c52ff] items-center justify-evenly flex-wrap">
+          {
+            db.map(product => (
+              product.id <= 4 &&
+                <Card
+                  key={product.id}
+                  src={product.src}
+                  alt={product.alt}
+                  productTitle={product.productTitle}
+                  productPrice={product.productPrice}
+                />
+            ))
+          }
+        </section>
       </main>
       <Footer />
     </>

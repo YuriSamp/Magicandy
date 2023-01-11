@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "src": "/products/banana-cake.png",
+        "alt": "Bolo de banana.",
+        "productTitle":"Bolo de Banana",
+        "productPrice": 50,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae placeat est aspernatur assumenda id quisquam voluptas molestias. Amet, sunt ab repellendus reprehenderit aliquam excepturi sed nulla architecto sit deleniti sequi."
+    },
+    {
+        "id": 2,
+        "src": "/products/macaron-cake.png",
+        "alt": "Bolo de Macaron.",
+        "productTitle":"Bolo de Macaron",
+        "productPrice": 50,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae placeat est aspernatur assumenda id quisquam voluptas molestias. Amet, sunt ab repellendus reprehenderit aliquam excepturi sed nulla architecto sit deleniti sequi."
+    },
+    {
+        "id": 3,
+        "src": "/products/magicandy-cake.png",
+        "alt": "Bolo da Casa.",
+        "productTitle":"Bolo da Casa",
+        "productPrice": 50,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae placeat est aspernatur assumenda id quisquam voluptas molestias. Amet, sunt ab repellendus reprehenderit aliquam excepturi sed nulla architecto sit deleniti sequi."
+    },
+    {
+        "id": 4,
+        "src": "/products/red-velvet-cake.png",
+        "alt": "Bolo Red Velvet.",
+        "productTitle":"Bolo Red Velvet",
+        "productPrice": 50,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae placeat est aspernatur assumenda id quisquam voluptas molestias. Amet, sunt ab repellendus reprehenderit aliquam excepturi sed nulla architecto sit deleniti sequi."
+    },
+    {
+        "id": 5,
+        "src": "/products/strawberry-cake.png",
+        "alt": "Bolo de Morango.",
+        "productTitle":"Bolo de Morango",
+        "productPrice": 50,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae placeat est aspernatur assumenda id quisquam voluptas molestias. Amet, sunt ab repellendus reprehenderit aliquam excepturi sed nulla architecto sit deleniti sequi."
+    },
+    {
+        "id": 6,
+        "src": "/products/banana-cake.png",
+        "alt": "Bolo de banana.",
+        "productTitle":"Bolo de Banana",
+        "productPrice": 50,
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae placeat est aspernatur assumenda id quisquam voluptas molestias. Amet, sunt ab repellendus reprehenderit aliquam excepturi sed nulla architecto sit deleniti sequi."
+    }
+]
