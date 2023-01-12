@@ -1,4 +1,4 @@
-const Button = (props:any) => {
+const Button = (props: any) => {
 
     return (
         <>

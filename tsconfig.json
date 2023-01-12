@@ -15,6 +15,15 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Button/Button.tsx", "components/Navbar/Navbar.tsx", "pages/index.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/Button/Button.tsx",
+    "components/Navbar/Navbar.tsx",
+    "pages/index.tsx",
+    "components/FormularioProduto/Formulario.tsx",
+    "components/FormularioProduto/Formulario.tsx"
+  ],
   "exclude": ["node_modules"]
 }

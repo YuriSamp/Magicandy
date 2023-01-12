@@ -7,9 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primaryPurple: {
-          default: '#8c52f',
-        },
+        backgroundPink: '#FF8FB1',
+        backgroundWhite: '#f8f8ff',
+        fontPurple: '#8c52ff',
       },
       fontFamily: {
         kalam: ['Kalam', 'cursive'],
