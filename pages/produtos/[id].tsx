@@ -21,11 +21,11 @@ const Post = () => {
             <div className='flex flex-col md:flex-row justify-between'>
               <Image src={item.src} alt={item.alt} width={500} height={400} className='rounded-lg w-full grow md:w-[50%]'></Image>
               <div className='px-8 flex flex-col'>
-                <h1 className='text-2xl my-6 text-fontPurple font-kalam text-center' >
+                <h1 className='text-2xl my-6 text-fontPurple font-kalam ' >
                   {item.productTitle}
                 </h1>
                 <div className='self-center'>
-                  <span className='text-xl text-start mb-[1rem] font-semibold'>
+                  <span className='text-xl text-start mb-[1rem] font-semibold '>
                     {`Preço: ${FormataBRL(item.productPrice)}`}
                   </span>
                   <FormularioProduto />

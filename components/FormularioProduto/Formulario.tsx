@@ -30,6 +30,7 @@ function FormularioProduto() {
           max={maxQuantity}
           onChange={e => quantityOnChangeHandler(e.target.value)}
           value={value}
+          readOnly={true}
         />
       </div>
       <div className='flex gap-4 justify-center items-center'>
