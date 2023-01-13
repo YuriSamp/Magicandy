@@ -10,23 +10,31 @@ import FormularioProduto from '../../components/FormularioProduto/Formulario'
 const Post = () => {
   const router = useRouter()
   const { id } = router.query
-  const array = db.filter(item => item.id === Number(id))[0]
+  const array = db.filter(item => item.id === Number(id))
 
   return (
     <>
       <Navbar />
       <main className='bg-backgroundPink flex justify-center items-center p-12 py-16'>
-        <div className='bg-white text-black rounded-lg drop-shadow-xl border-2 border-fontPurple p-4 max-w-[1000px]'>
-          <div className='flex'>
-            <Image src={array.src} alt={array.alt} width={500} height={400} className='rounded-lg'></Image>
-            <div className='px-8 flex flex-col'>
-              <h1 className='text-2xl text-fontPurple font-kalam' >{array.productTitle}</h1>
-              <h3 className='text-lg'>{FormataBRL(array.productPrice)}</h3>
-              <FormularioProduto />
+        {array.map(item => (
+          <div className='bg-white text-black rounded-lg drop-shadow-xl border-2 border-fontPurple p-2 max-w-[1000px]' key={item.id}>
+            <div className='flex flex-col md:flex-row justify-between'>
+              <Image src={item.src} alt={item.alt} width={500} height={400} className='rounded-lg w-full grow md:w-[50%]'></Image>
+              <div className='px-8 flex flex-col'>
+                <h1 className='text-2xl my-6 text-fontPurple font-kalam text-center' >
+                  {item.productTitle}
+                </h1>
+                <div className='self-center'>
+                  <span className='text-xl text-start mb-[1rem] font-semibold'>
+                    {`Preço: ${FormataBRL(item.productPrice)}`}
+                  </span>
+                  <FormularioProduto />
+                </div>
+              </div>
             </div>
+            <p className='mt-2 text-justify indent-4 text-xl p-4'>{item.description}</p>
           </div>
-          <p>{array.description}</p>
-        </div>
+        ))}
       </main>
       <Footer />
     </>

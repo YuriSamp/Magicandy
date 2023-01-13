@@ -26,6 +26,16 @@ a {
   text-decoration: none;
 }
 
+input[type="range"]::-webkit-slider-thumb {
+  width: 15px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  cursor: ew-resize;
+  background: #8c52ff;
+  border-radius: 50%;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
