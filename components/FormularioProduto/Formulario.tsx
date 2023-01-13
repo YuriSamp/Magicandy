@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import {AiOutlinePlusCircle, AiOutlineMinusCircle} from 'react-icons/Ai'
+import React, { useState, } from 'react';
+import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai'
 
 function FormularioProduto() {
   const [value, setValue] = useState(1);
@@ -11,10 +11,10 @@ function FormularioProduto() {
   const plusQuantity = () => {
     if (value < maxQuantity) setValue((value) + 1)
   }
-  const quantityOnChangeHandler = (e) => {
-    let insertedValue = Number(e.target.value)
-    if (insertedValue >= minQuantity && insertedValue <= maxQuantity){
-        setValue(insertedValue)
+  const quantityOnChangeHandler = (value: string) => {
+    let insertedValue = Number(value)
+    if (insertedValue >= minQuantity && insertedValue <= maxQuantity) {
+      setValue(insertedValue)
     }
   }
 
@@ -28,13 +28,13 @@ function FormularioProduto() {
           className='self-center bg-transparent w-full text-center border-fontPurple border-2 rounded-lg'
           min={minQuantity}
           max={maxQuantity}
-          onChange={quantityOnChangeHandler}
+          onChange={e => quantityOnChangeHandler(e.target.value)}
           value={value}
         />
       </div>
       <div className='flex gap-4 justify-center items-center'>
         <AiOutlineMinusCircle
-          className='text-3xl fill-fontPurple' 
+          className='text-3xl fill-fontPurple'
           onClick={minusQuantity}
         />
         <input
@@ -45,11 +45,11 @@ function FormularioProduto() {
           min={minQuantity}
           max={maxQuantity}
         />
-        <AiOutlinePlusCircle 
-          className='text-3xl fill-fontPurple' 
+        <AiOutlinePlusCircle
+          className='text-3xl fill-fontPurple'
           onClick={plusQuantity}
         />
-        
+
       </div>
       <button className='select-none text-lg p-2 mx-auto my-[1rem] radius-5 ring-2 ring-[#FF8FB1] rounded-lg font-kalam'>
         Adicionar ao carrinho
