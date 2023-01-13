@@ -18,13 +18,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className='min-h-screen w-full  bg-backgroundPink'>
-        <div className='relative border-b-2 border-fontPurple'>
-          <Image src={banner} alt='banner da pagina principal' className='h-[calc(100vh-208px)] w-full' />
-          <h1 className='absolute text-pink-800 text-[55px] top-[25%] left-[10%] translate-y-[50%] font-kalam'>Uma confeitaria que traz a magia da felicidade <br />
-            <span className='ml-80'>para adoçar seu dia!</span> </h1>
+      <main className='flex flex-col min-h-screen w-full min-w-[320px]  bg-backgroundPink'>
+        
+        <div className='flex bg-home-banner p-1 bg-[60%] md:bg-[length:100%_100%] lg:bg-[length:100%_120%] bg-no-repeat bg-cover min-h-[300px] md:h-[400px] lg:h-[500px] items-center justify-center border-b-2 border-fontPurple'>
+          <h2 className='text-pink-900 z-10 mt-0 text-[2rem] lg:text-[55px] font-kalam relative 
+          before:block before:absolute before:inset-0 before:opacity-30 before:z-0 before:bg-white
+          '>A magia da felicidade <br className='hidden md:inline-block' />
+          <span className='md:ml-32'>para adoçar seu dia!</span> </h2>
         </div>
-        <section className="flex text-black flex-col md:flex-row lg:px-48 gap-16 md:gap-8 px-16 py-16 border-b-2 border-[#8c52ff] items-center justify-evenly flex-wrap">
+
+        <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 py-16 border-b-2 border-[#8c52ff] items-center justify-evenly flex-wrap">
           {
             db.map(product => (
               product.id <= 4 &&

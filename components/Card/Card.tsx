@@ -6,7 +6,7 @@ import { IProduto } from '../../utils/IProduto'
 const Card = (props: IProduto) => {
     console.log(props)
     return (
-        <div className="flex flex-col gap-2 lg:gap-0 border-2 border-[#8c52ff] items-center justify-between text-center rounded-2xl overflow-hidden  min-w-500px mx-auto md:min-w-[400px] drop-shadow-xl">
+        <div className="flex flex-col md:mx-0 lg:gap-0 border-2 border-[#8c52ff] items-center justify-between text-center rounded-2xl overflow-hidden min-w-500px mx-auto md:min-w-[400px] drop-shadow-xl">
             <Image
                 className=" w-[400px]  h-[300px]  object-cover"
                 width={300}

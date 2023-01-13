@@ -11,11 +11,11 @@ const Navbar = () => {
                 <Link href="/">
                     <Image className="w-[200px]" src={logo} alt="Logo da Confeitaria Magicandy." />
                 </Link>
-                <ul className="flex gap-16 font-kalam text-xl">
-                    <li><Link href="/" className='text-fontPurple text-2xl' >Home</Link></li>
-                    <li><Link href="/Produtos" className='text-fontPurple text-2xl' >Produtos</Link></li>
-                    <li><Link href="/Contato" className='text-fontPurple text-2xl' >Contato</Link></li>
-                    <li><Link href="/Carrinho" className="flex items-center gap-2 text-fontPurple text-2xl"><AiOutlineShoppingCart />Carrinho</Link></li>
+                <ul className="flex flex-col md:flex-row gap-2 md:gap-8 font-kalam">
+                    <li><Link href="/" className='text-fontPurple text-xl lg:text-2xl' >Home</Link></li>
+                    <li><Link href="/Produtos" className='text-fontPurple text-xl lg:text-2xl' >Produtos</Link></li>
+                    <li><Link href="/Contato" className='text-fontPurple text-xl lg:text-2xl' >Contato</Link></li>
+                    <li><Link href="/Carrinho" className="flex items-center gap-2 text-fontPurple text-xl lg:text-2xl"><AiOutlineShoppingCart />Carrinho</Link></li>
                 </ul>
             </nav>
         </>
