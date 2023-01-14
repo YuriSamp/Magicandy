@@ -7,6 +7,8 @@ import { FormataBRL } from '../../utils/ConvertCurrency'
 import Image from 'next/image'
 import FormularioProduto from '../../components/FormularioProduto/Formulario'
 
+//TODO Revisar
+
 const Post = () => {
   const router = useRouter()
   const { id } = router.query
@@ -25,10 +27,10 @@ const Post = () => {
                   {item.productTitle}
                 </h1>
                 <div className='self-center'>
-                  <span className='text-xl text-start mb-[1rem] font-semibold '>
+                  <span className='text-xl text-start mb-[3rem] font-semibold '>
                     {`Preço: ${FormataBRL(item.productPrice)}`}
                   </span>
-                  <FormularioProduto />
+                  <FormularioProduto Price={item.productPrice} />
                 </div>
               </div>
             </div>
