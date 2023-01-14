@@ -1,7 +1,13 @@
 import React, { useState, } from 'react';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai'
+import { FormataBRL } from '../../utils/ConvertCurrency';
+import Button from '../Button/Button';
 
-function FormularioProduto() {
+interface Props {
+  Price: number
+}
+
+function FormularioProduto(props: Props) {
   const [value, setValue] = useState(1);
   let minQuantity = 1
   let maxQuantity = 10
@@ -19,13 +25,13 @@ function FormularioProduto() {
   }
 
   return (
-    <form className='flex flex-col gap-4 border-b-2 md:border-b-0 border-fontPurple py-4'>
+    <form className='flex flex-col gap-6 border-b-2 md:border-b-0 border-fontPurple py-4'>
       <div className='flex gap-4 justify-between'>
         <label htmlFor="textQuantity">Quantidade:</label>
         <input
           type="number"
           id="textQuantity"
-          className='self-center bg-transparent w-full text-center border-fontPurple border-2 rounded-lg'
+          className='self-center bg-transparent w-full text-center border-fontPurple border-2 rounded-lg select-none'
           min={minQuantity}
           max={maxQuantity}
           onChange={e => quantityOnChangeHandler(e.target.value)}
@@ -52,9 +58,10 @@ function FormularioProduto() {
         />
 
       </div>
-      <button className='select-none text-lg p-2 mx-auto my-[1rem] radius-5 ring-2 ring-[#FF8FB1] rounded-lg font-kalam'>
-        Adicionar ao carrinho
-      </button>
+      <h2 className='text-xl text-start font-semibold select-none' >
+        Total: {FormataBRL((value * props.Price))}
+      </h2>
+      <Button value='Adicionar ao carrinho' />
     </form>
   );
 }
