@@ -3,7 +3,7 @@ import Link from 'next/link';
 interface Props {
     value: string;
     type?: string;
-    href?: number;
+    href?: string | number;
 }
 
 
