@@ -5,6 +5,8 @@ import Card from '../components/Card/Card'
 import db from '../data/db.json'
 import Search from '../components/Search/Search'
 
+//TODO deixar com background white para padronizar
+
 function Produtos() {
   const onChangeHandler = (event: any) => {
     setName(event.target.value)
@@ -18,8 +20,6 @@ function Produtos() {
     const searchValueNormalized = name.toLowerCase()
     return titleNormalized.includes(searchValueNormalized)
   })
-
-  console.log(type)
 
   return (
     <>

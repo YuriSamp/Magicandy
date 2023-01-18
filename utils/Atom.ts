@@ -13,3 +13,8 @@ export const CartAtom = atom<CartItem[]>({
   key: 'CartAtom',
   default: [],
 });
+
+export const Cart = atom<CartItem[]>({
+  key: 'cart',
+  default: [],
+});
