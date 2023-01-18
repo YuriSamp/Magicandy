@@ -2,15 +2,23 @@ import React, { useState, } from 'react';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai'
 import { FormataBRL } from '../../utils/ConvertCurrency';
 import Button from '../Button/Button';
-
+import { useRecoilState } from 'recoil'
+import { CartAtom, CartItem } from '../../utils/Atom'
 interface Props {
-  Price: number
+  Price: number,
+  Id: Number,
+  Name: string
+  Imagem: string
 }
 
 function FormularioProduto(props: Props) {
+
   const [value, setValue] = useState(1);
+  const [_, setCart] = useRecoilState<CartItem[]>(CartAtom)
+
   let minQuantity = 1
   let maxQuantity = 10
+
   const minusQuantity = () => {
     if (value > minQuantity) setValue((value) - 1)
   }
@@ -24,8 +32,21 @@ function FormularioProduto(props: Props) {
     }
   }
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const CartItem = {
+      Name: props.Name,
+      Quantity: value,
+      Id: props.Id,
+      Price: props.Price,
+      Image: props.Imagem
+    }
+    setCart((prevState) => [...prevState, CartItem])
+  }
+
+
   return (
-    <form className='flex flex-col gap-6 border-b-2 md:border-b-0 border-fontPurple py-4'>
+    <form className='flex flex-col gap-6 border-b-2 md:border-b-0 border-fontPurple py-4' onSubmit={(e) => handleSubmit(e)}>
       <div className='flex gap-4 justify-between'>
         <label htmlFor="textQuantity">Quantidade:</label>
         <input

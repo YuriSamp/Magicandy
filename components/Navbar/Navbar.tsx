@@ -3,7 +3,6 @@ import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import logo from '../../public/logo.svg'
 
-
 const Navbar = () => {
     return (
         <>

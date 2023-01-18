@@ -1,9 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
-import banner from '../public/banner/banner-main.png'
 import Card from '../components/Card/Card'
 import db from '../data/db.json'
 

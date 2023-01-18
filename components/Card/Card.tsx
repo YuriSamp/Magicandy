@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import { FormataBRL } from "../../utils/ConvertCurrency"
 import { IProduto } from '../../utils/IProduto'
 import Button from '../Button/Button'

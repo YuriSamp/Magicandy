@@ -30,7 +30,7 @@ const Post = () => {
                   <span className='text-xl text-start mb-[3rem] font-semibold '>
                     {`Preço: ${FormataBRL(item.productPrice)}`}
                   </span>
-                  <FormularioProduto Price={item.productPrice} />
+                  <FormularioProduto Price={item.productPrice} Id={item.id} Name={item.productTitle} Imagem={item.src} />
                 </div>
               </div>
             </div>

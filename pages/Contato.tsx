@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar/Navbar'
 import { useForm, SubmitHandler } from "react-hook-form";
 import Button from '../components/Button/Button';
 
+//TODO Criar um componente botao
 
 type Inputs = {
   Nome: string,
