@@ -3,9 +3,20 @@ import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 import Card from '../components/Card/Card'
 import db from '../data/db.json'
+import { IProduto } from '../utils/IProduto'
 
-export default function Home() {
+interface Props {
+  dbSort: IProduto[]
+}
 
+export async function getServerSideProps() {
+  const dbSort = db.sort(() => 0.5 - Math.random()).splice(0, 3);
+  return {
+    props: { dbSort }
+  }
+}
+
+export default function Home({ dbSort }: Props) {
   return (
     <>
       <Head>
@@ -16,7 +27,6 @@ export default function Home() {
       </Head>
       <Navbar />
       <main className='flex flex-col min-h-screen w-full min-w-[320px]  bg-backgroundPink'>
-
         <div className='flex bg-home-banner p-1 bg-[60%] md:bg-[length:100%_100%] lg:bg-[length:100%_120%] bg-no-repeat bg-cover min-h-[300px] md:h-[400px] lg:h-[500px] items-center justify-center border-b-2 border-fontPurple'>
           <h2 className='text-pink-900 z-10 mt-0 text-[2rem] lg:text-[55px] font-kalam relative 
           before:block before:absolute before:inset-0 before:opacity-30 before:z-0 before:bg-white
@@ -26,8 +36,7 @@ export default function Home() {
 
         <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 py-16 border-b-2 border-[#8c52ff] items-center justify-evenly flex-wrap">
           {
-            db.map(product => (
-              product.id <= 3 &&
+            dbSort.map(product => (
               <Card
                 key={product.id}
                 id={product.id}
