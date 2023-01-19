@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import Footer from '../components/Footer/Footer'
-import Navbar from '../components/Navbar/Navbar'
-import Card from '../components/Card/Card'
-import db from '../data/db.json'
-import Search from '../components/Search/Search'
+import Footer from '../../components/Footer/Footer'
+import Navbar from '../../components/Navbar/Navbar'
+import Card from '../../components/Card/Card'
+import db from '../../data/db.json'
+import Search from '../../components/Search/Search'
 
 //TODO deixar com background white para padronizar
 
