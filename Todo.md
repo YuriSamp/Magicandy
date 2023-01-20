@@ -23,7 +23,7 @@ Performance:
 
 - Utilizar hooks do react/next
 - SEO
-- Validações nos forms (yup)
+- Validações nos forms (react-hook-forms)
 
 Features:
 
