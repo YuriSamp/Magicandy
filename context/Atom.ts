@@ -1,4 +1,3 @@
-import { IProduto } from './IProduto';
 import { atom } from 'recoil';
 
 export type CartItem = {
@@ -11,5 +10,10 @@ export type CartItem = {
 
 export const CartAtom = atom<CartItem[]>({
   key: 'CartAtom',
+  default: [],
+});
+
+export const Cart = atom<CartItem[]>({
+  key: 'cart',
   default: [],
 });

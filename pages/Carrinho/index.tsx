@@ -4,13 +4,32 @@ import Navbar from '../../components/Navbar/Navbar'
 import CartItem from '../../components/CartItem/CartItem'
 import Button from '../../components/Button/Button'
 import { useRecoilValue } from 'recoil'
-import { CartAtom } from '../../utils/Atom'
+import { CartAtom } from '../../context/Atom'
+import { FormataBRL } from '../../utils/ConvertCurrency'
 
 
 function Cart() {
 
   const Lista = useRecoilValue(CartAtom)
-  console.log(Lista)
+  const FinalPrice = Lista.reduce((acc, item) => acc += item.Quantity * item.Price, 0)
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const Cart = {
+      Lista,
+      FinalPrice
+    }
+
+
+    // const CartItem = {
+    //   Name: props.Name,
+    //   Quantity: value,
+    //   Id: props.Id,
+    //   Price: props.Price,
+    //   Image: props.Imagem
+    // }
+    // setCart((prevState) => [...prevState, CartItem])
+  }
   return (
     <>
       <Navbar />
@@ -24,7 +43,10 @@ function Cart() {
               <CartItem key={index} Name={item.Name} Imagem={item.Image} Quantity={item.Quantity} Price={item.Price} />
             ))}
           </div>
-          <Button value={"Finalizar compra"} href="../" type="LINK" />
+          <div className='flex items-center sm:gap-52 md:gap-64 '>
+            <Button value={"Finalizar compra"} href="../" type="LINK" />
+            <h3 className='text-lg'>Total : {FormataBRL(FinalPrice)}</h3>
+          </div>
         </div>
       </main>
       <Footer />

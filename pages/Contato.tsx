@@ -5,8 +5,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import Button from '../components/Button/Button';
 import Fields from '../components/Fields/Fields';
 
-//TODO Criar um componente botao
-
 type Inputs = {
   Nome: string,
   Email: string,
@@ -16,7 +14,7 @@ type Inputs = {
 };
 
 function Contato() {
-  const onSubmitHandler = () => {};
+  const onSubmitHandler = () => { };
 
   return (
     <>
@@ -30,26 +28,26 @@ function Contato() {
             <h1 className='text-2xl font-kalam text-fontPurple font-semibold'>Entre em contato conosco</h1>
           </div>
 
-          <Fields 
+          <Fields
             Name="name"
-            Label="Nome"
+            Label="Nome *"
             Type="text"
           />
 
-          <Fields 
+          <Fields
             Name="email"
-            Label="E-mail"
+            Label="E-mail *"
             Type="email"
           />
 
           <Fields
             Name="telephone"
-            Label="Telefone"
+            Label="Telefone *"
             Type="tel"
           />
 
           <div className='flex flex-col gap-2'>
-            <label htmlFor='contactReason'>Motivo do contato</label>
+            <label htmlFor='contactReason'>Motivo do contato *</label>
             <select id='contactReason' className='py-2 px-4 rounded-lg ring-backgroundPink ring-2 bg-slate-200 '>
               <option>Duvida</option>
               <option>Sugestão</option>
@@ -58,16 +56,17 @@ function Contato() {
             </select>
             <span></span>
           </div>
-          
-          <Fields 
+
+          <Fields
             Name="textarea"
-            Label="Mensagem"
+            Label="Mensagem *"
             Type="textarea"
           />
 
           <div className='flex justify-center pt-4'>
             <Button value={'Enviar Formulario'} />
           </div>
+          <span className='text-center text-red-500'>* Campos obrigatórios</span>
         </form>
         <div>
 
