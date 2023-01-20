@@ -1,17 +1,16 @@
 import React from 'react'
-import Footer from '../components/Footer/Footer'
-import Navbar from '../components/Navbar/Navbar'
-import { useForm, SubmitHandler } from "react-hook-form";
-import Button from '../components/Button/Button';
-import Fields from '../components/Fields/Fields';
+import Footer from '@ui/Footer'
+import Navbar from '@ui/Navbar'
+import Button from '@ui/Button';
+import Fields from 'components/Fields/Fields';
 
-type Inputs = {
-  Nome: string,
-  Email: string,
-  Telefone: string,
-  MotivoDoContato: string,
-  texto: string,
-};
+// type Inputs = {
+//   Nome: string,
+//   Email: string,
+//   Telefone: string,
+//   MotivoDoContato: string,
+//   texto: string,
+// };
 
 function Contato() {
   const onSubmitHandler = () => { };

@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import { FormataBRL } from '../../utils/ConvertCurrency'
-import { AiFillDelete } from 'react-icons/ai'
-import Button from '../Button/Button';
+import { FormataBRL } from 'utils/ConvertCurrency'
+
 interface Props {
   Quantity: number;
   Price: number;

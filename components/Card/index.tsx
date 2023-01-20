@@ -1,7 +1,7 @@
 import Image from "next/image"
-import { FormataBRL } from "../../utils/ConvertCurrency"
-import { IProduto } from '../../interface/IProduto'
-import Button from '../Button/Button'
+import { FormataBRL } from "utils/ConvertCurrency"
+import { IProduto } from 'interface/IProduto'
+import Button from '../Button'
 
 const Card = (props: IProduto) => {
     return (

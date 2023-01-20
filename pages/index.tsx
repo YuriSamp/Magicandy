@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import Navbar from '../components/Navbar/Navbar'
-import Footer from '../components/Footer/Footer'
-import Card from '../components/Card/Card'
-import db from '../data/db.json'
-import { IProduto } from '../interface/IProduto'
+import Navbar from '@ui/Navbar'
+import Footer from '@ui/Footer'
+import Card from '@ui/Card'
+import db from 'data/db.json'
+import { IProduto } from 'interface/IProduto'
 
-interface Props {
+type Props = {
   dbSort: IProduto[]
 }
 

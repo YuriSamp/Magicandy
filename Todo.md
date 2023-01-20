@@ -8,6 +8,7 @@ Pages:
 - Página de Checkout
 - Refazer Home
 - Verificar se o produto existe, se n jogar pra pagina 404
+- Fazer uma renderização condicional da página de carrinho
 
 UX/UI:
 

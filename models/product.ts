@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { IProduto } from '../interface/IProduto';
+import { IProduto } from 'interface/IProduto';
 
 const Productschema = new mongoose.Schema<IProduto>(
   {
@@ -15,6 +15,7 @@ const Productschema = new mongoose.Schema<IProduto>(
   }
 );
 
-const Product = mongoose.model<IProduto>('Product', Productschema);
+const Product =
+  mongoose.model.Product || mongoose.model<IProduto>('Product', Productschema);
 
 export default Product;

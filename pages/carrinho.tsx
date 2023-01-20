@@ -1,11 +1,11 @@
 import React from 'react'
-import Footer from '../../components/Footer/Footer'
-import Navbar from '../../components/Navbar/Navbar'
-import CartItem from '../../components/CartItem/CartItem'
-import Button from '../../components/Button/Button'
+import Footer from '@ui/Footer'
+import Navbar from '@ui/Navbar'
+import CartItem from '@ui/CartItem'
+import Button from '@ui/Button'
 import { useRecoilValue } from 'recoil'
-import { CartAtom } from '../../context/Atom'
-import { FormataBRL } from '../../utils/ConvertCurrency'
+import { CartAtom } from 'context/Atom'
+import { FormataBRL } from 'utils/ConvertCurrency'
 
 
 function Cart() {

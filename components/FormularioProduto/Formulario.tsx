@@ -1,9 +1,9 @@
 import React, { useState, } from 'react';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai'
-import { FormataBRL } from '../../utils/ConvertCurrency';
-import Button from '../Button/Button';
+import { FormataBRL } from 'utils/ConvertCurrency';
+import Button from '@ui/Button';
 import { useRecoilState } from 'recoil'
-import { CartAtom, CartItem } from '../../context/Atom'
+import { CartAtom, CartItem } from 'context/Atom'
 interface Props {
   Price: number,
   Id: Number,

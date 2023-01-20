@@ -1,11 +1,10 @@
 import { useRouter } from 'next/router'
-import Footer from '../../components/Footer/Footer'
-import Navbar from '../../components/Navbar/Navbar'
-import db from '../../data/db.json'
-import { IProduto } from '../../interface/IProduto'
-import { FormataBRL } from '../../utils/ConvertCurrency'
+import Footer from '@ui/Footer'
+import Navbar from '@ui/Navbar'
+import db from 'data/db.json'
+import { FormataBRL } from 'utils/ConvertCurrency'
 import Image from 'next/image'
-import FormularioProduto from '../../components/FormularioProduto/Formulario'
+import FormularioProduto from 'components/FormularioProduto/Formulario'
 
 //TODO Revisar
 
