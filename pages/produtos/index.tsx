@@ -16,7 +16,7 @@ function Produtos() {
   const [type, setType] = useState('Todos')
 
   const dbFiltrado = db.filter(item => {
-    const titleNormalized = item.productTitle.toLocaleLowerCase()
+    const titleNormalized = item.ProductTitle.toLocaleLowerCase()
     const searchValueNormalized = name.toLowerCase()
     return titleNormalized.includes(searchValueNormalized)
   })
@@ -43,12 +43,12 @@ function Produtos() {
           {
             dbFiltrado.map(product => (
               <Card
-                key={product.id}
-                id={product.id}
-                src={product.src}
-                alt={product.alt}
-                productTitle={product.productTitle}
-                productPrice={product.productPrice}
+                key={product.Id}
+                Id={product.Id}
+                Src={product.Src}
+                Alt={product.Alt}
+                ProductTitle={product.ProductTitle}
+                ProductPrice={product.ProductPrice}
               />
             ))
           }

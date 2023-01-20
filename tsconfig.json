@@ -24,7 +24,9 @@
     "pages/index.tsx",
     "components/FormularioProduto/Formulario.tsx",
     "components/FormularioProduto/Formulario.tsx",
-    "utils/connect.js"
+    "utils/connect.ts",
+    "pages/api/seeds.js",
+    "pages/api/seeds.js"
   ],
   "exclude": ["node_modules"]
 }

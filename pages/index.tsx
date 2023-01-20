@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 import Card from '../components/Card/Card'
 import db from '../data/db.json'
-import { IProduto } from '../utils/IProduto'
+import { IProduto } from '../interface/IProduto'
 
 interface Props {
   dbSort: IProduto[]
@@ -38,12 +38,12 @@ export default function Home({ dbSort }: Props) {
           {
             dbSort.map(product => (
               <Card
-                key={product.id}
-                id={product.id}
-                src={product.src}
-                alt={product.alt}
-                productTitle={product.productTitle}
-                productPrice={product.productPrice}
+                key={product.Id}
+                Id={product.Id}
+                Src={product.Src}
+                Alt={product.Alt}
+                ProductTitle={product.ProductTitle}
+                ProductPrice={product.ProductPrice}
               />
             ))
           }

@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import CartItem from '../../components/CartItem/CartItem'
 import Button from '../../components/Button/Button'
 import { useRecoilValue } from 'recoil'
-import { CartAtom } from '../../utils/Atom'
+import { CartAtom } from '../../context/Atom'
 import { FormataBRL } from '../../utils/ConvertCurrency'
 
 

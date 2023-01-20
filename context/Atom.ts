@@ -1,4 +1,3 @@
-import { IProduto } from './IProduto';
 import { atom } from 'recoil';
 
 export type CartItem = {
