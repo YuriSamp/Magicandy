@@ -1,8 +1,9 @@
+import { IProduto } from 'interface/IProduto';
 import { atom } from 'recoil';
 
 export type CartItem = {
   Price: number;
-  Id: Number;
+  _id: string;
   Name: string;
   Quantity: number;
   Image: string;
@@ -15,5 +16,10 @@ export const CartAtom = atom<CartItem[]>({
 
 export const Cart = atom<CartItem[]>({
   key: 'cart',
+  default: [],
+});
+
+export const Database = atom<IProduto[]>({
+  key: 'Database',
   default: [],
 });

@@ -6,7 +6,7 @@ import { useRecoilState } from 'recoil'
 import { CartAtom, CartItem } from 'context/Atom'
 interface Props {
   Price: number,
-  Id: Number,
+  _id: string,
   Name: string
   Imagem: string
 }
@@ -37,7 +37,7 @@ function FormularioProduto(props: Props) {
     const CartItem = {
       Name: props.Name,
       Quantity: value,
-      Id: props.Id,
+      _id: props._id,
       Price: props.Price,
       Image: props.Imagem
     }

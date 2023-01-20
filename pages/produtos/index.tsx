@@ -4,10 +4,29 @@ import Navbar from '@ui/Navbar'
 import Card from '@ui/Card'
 import db from 'data/db.json'
 import Search from 'components/Search/Search'
+import { IProduto } from 'interface/IProduto'
+import Product from 'models/product';
+import dbConnect from 'services/connect';
 
 //TODO deixar com background white para padronizar
 
-function Produtos() {
+type Props = {
+  db: IProduto[]
+}
+
+export async function getServerSideProps() {
+  dbConnect.connect()
+  const database = await Product.find();
+  dbConnect.disconnect()
+  return {
+    props: { db: JSON.parse(JSON.stringify(database)) }
+  }
+}
+
+
+function Produtos({ db }: Props) {
+  console.log(db)
+
   const onChangeHandler = (event: any) => {
     setName(event.target.value)
   }
@@ -15,11 +34,11 @@ function Produtos() {
   const [name, setName] = useState('')
   const [type, setType] = useState('Todos')
 
-  const dbFiltrado = db.filter(item => {
-    const titleNormalized = item.ProductTitle.toLocaleLowerCase()
-    const searchValueNormalized = name.toLowerCase()
-    return titleNormalized.includes(searchValueNormalized)
-  })
+  // const dbFiltrado = db.filter(item => {
+  //   const titleNormalized = item.ProductTitle.toLocaleLowerCase()
+  //   const searchValueNormalized = name.toLowerCase()
+  //   return titleNormalized.includes(searchValueNormalized)
+  // })
 
   return (
     <>
@@ -41,10 +60,10 @@ function Produtos() {
         </div>
         <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 py-16 border-b-2 border-fontPurple items-center justify-evenly flex-wrap">
           {
-            dbFiltrado.map(product => (
+            db.map(product => (
               <Card
-                key={product.Id}
-                Id={product.Id}
+                key={product._id}
+                _id={product._id}
                 Src={product.Src}
                 Alt={product.Alt}
                 ProductTitle={product.ProductTitle}

@@ -20,7 +20,7 @@ const Card = (props: IProduto) => {
                 <span className="text-xl">
                     {FormataBRL(props.ProductPrice)}
                 </span>
-                <Button type='LINK' value='Ver detalhes' href={props.Id} />
+                <Button type='LINK' value='Ver detalhes' href={props._id} />
             </div>
 
         </div>

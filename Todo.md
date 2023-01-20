@@ -12,6 +12,7 @@ Pages:
 
 UX/UI:
 
+- FavIcon
 - Efeitos do design (hovers, etc)
 - Responsividade
 - Incluir máscaras nos forms

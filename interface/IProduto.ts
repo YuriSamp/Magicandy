@@ -1,5 +1,5 @@
 export interface IProduto {
-  Id: number;
+  _id: string;
   Src: string;
   Alt: string;
   ProductTitle: string;
