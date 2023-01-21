@@ -1,12 +1,12 @@
 import React from 'react'
 
-interface IProps {
+interface Props {
     Name: string
     Label: string
     Type: string
 }
 
-function Fields({ Name, Label, Type }: IProps) {
+function Fields({ Name, Label, Type }: Props) {
 
 
     return (

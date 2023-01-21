@@ -1,8 +1,8 @@
+import Button from '@ui/Button';
 import Image from 'next/image'
 import React from 'react'
-import { FormataBRL } from '../../utils/ConvertCurrency'
-import { AiFillDelete } from 'react-icons/ai'
-import Button from '../Button/Button';
+import { FormataBRL } from 'utils/ConvertCurrency'
+
 interface Props {
   Quantity: number;
   Price: number;
@@ -23,11 +23,14 @@ function CartItem(props: Props) {
         alt="qlq coisa"
         src={props.Imagem}
       />
-      <div className='flex flex-col justify-center items-center grow text-xl '>
+      <div className='flex flex-col  grow text-xl '>
         <div className='flex flex-col p-4'>
           <h3>{props.Name}</h3>
           <span>Quantidade: {props.Quantity}</span>
           <span>Valor unitário: {FormataBRL(props.Price)}</span>
+        </div>
+        <div className='px-4 flex items-center md:self-start'>
+          <Button value={"Deletar"} />
         </div>
       </div>
     </div>

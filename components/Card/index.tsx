@@ -1,7 +1,7 @@
 import Image from "next/image"
-import { FormataBRL } from "../../utils/ConvertCurrency"
-import { IProduto } from '../../interface/IProduto'
-import Button from '../Button/Button'
+import { FormataBRL } from "utils/ConvertCurrency"
+import { IProduto } from 'interface/IProduto'
+import Button from '../Button'
 
 const Card = (props: IProduto) => {
     return (
@@ -20,7 +20,7 @@ const Card = (props: IProduto) => {
                 <span className="text-xl">
                     {FormataBRL(props.ProductPrice)}
                 </span>
-                <Button type='LINK' value='Ver detalhes' href={props.Id} />
+                <Button type='LINK' value='Ver detalhes' href={props._id} />
             </div>
 
         </div>

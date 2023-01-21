@@ -6,7 +6,6 @@ const connection = {};
 
 async function connect() {
   if (connection.isConnected) {
-    console.log('ja ta conectado');
     return;
   }
   if (mongoose.connect.length > 0) {
@@ -14,9 +13,9 @@ async function connect() {
     if (mongoose.connect.length === 1) {
       return;
     }
-    await mongoose.disconnect;
+    mongoose.disconnect;
   }
-  const db = await mongoose.connect(process.env.MONGODB_URI);
+  const db = mongoose.connect(process.env.MONGODB_URI);
   connection.isConnected = db.connections[0].readyState;
 }
 
@@ -29,5 +28,5 @@ async function disconnect() {
   }
 }
 
-const dbConnect = { connect };
+const dbConnect = { connect, disconnect };
 export default dbConnect;

@@ -13,20 +13,26 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ui/*": ["./components/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/Button/Button.tsx",
-    "components/Navbar/Navbar.tsx",
+    "components/Button/index.tsx",
+    "components/Navbar/index.tsx",
     "pages/index.tsx",
     "components/FormularioProduto/Formulario.tsx",
     "components/FormularioProduto/Formulario.tsx",
     "utils/connect.ts",
-    "pages/api/seeds.js",
-    "pages/api/seeds.js"
+    "pages/api/seeds.ts",
+    "pages/api/seeds.ts",
+    "services/connect.js",
+    "services/connect.js"
   ],
   "exclude": ["node_modules"]
 }
