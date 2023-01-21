@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import logo from 'public/logo.svg'
+import logo from 'public/logo.png'
 
 const Navbar = () => {
     return (

@@ -6,7 +6,6 @@ const connection = {};
 
 async function connect() {
   if (connection.isConnected) {
-    console.log('ja ta conectado');
     return;
   }
   if (mongoose.connect.length > 0) {
