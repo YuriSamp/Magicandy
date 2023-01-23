@@ -1,6 +1,4 @@
 import { useRouter } from 'next/router'
-import Footer from '@ui/Footer'
-import Navbar from '@ui/Navbar'
 import { FormataBRL } from 'utils/ConvertCurrency'
 import Image from 'next/image'
 import FormularioProduto from 'components/FormularioProduto/Formulario'
@@ -34,7 +32,6 @@ const Post = ({ db }: DataBase) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Navbar />
       <main className='bg-backgroundPink flex justify-center items-center p-12 py-16'>
         {array.map(item => (
           <div className='bg-white text-black rounded-lg drop-shadow-xl border-2 border-fontPurple p-2 max-w-[1000px]' key={item._id}>
@@ -56,7 +53,6 @@ const Post = ({ db }: DataBase) => {
           </div>
         ))}
       </main>
-      <Footer />
     </>
   )
 }

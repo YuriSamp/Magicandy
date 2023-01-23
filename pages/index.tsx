@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Navbar from '@ui/Navbar'
-import Footer from '@ui/Footer'
 import Card from '@ui/Card'
 import dbConnect from 'services/connect'
 import Product from 'models/product'
@@ -27,7 +25,6 @@ export default function Home({ db }: DataBase) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Navbar />
       <main className='flex flex-col min-h-screen w-full min-w-[320px]  bg-backgroundPink'>
         <div className='flex bg-home-banner p-1 bg-[60%] md:bg-[length:100%_100%] lg:bg-[length:100%_120%] bg-no-repeat bg-cover min-h-[300px] md:h-[400px] lg:h-[500px] items-center justify-center border-b-2 border-fontPurple'>
           <h2 className='text-pink-900 z-10 mt-0 text-[2rem] lg:text-[55px] font-kalam relative 
@@ -51,7 +48,6 @@ export default function Home({ db }: DataBase) {
           }
         </section>
       </main>
-      <Footer />
     </>
   )
 }

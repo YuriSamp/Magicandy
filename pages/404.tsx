@@ -18,7 +18,6 @@ export default function Custom404() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Navbar />
       <main className='bg-backgroundPink min-h-[calc(100vh-379px)] flex justify-center items-center'>
         <div className='px-48 flex items-center gap-32'>
           <div className='flex flex-col items-center'>
@@ -33,7 +32,6 @@ export default function Custom404() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }

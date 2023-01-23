@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import Footer from '@ui/Footer'
-import Navbar from '@ui/Navbar'
 import Card from '@ui/Card'
 import db from 'data/db.json'
 import Search from 'components/Search/Search'
@@ -46,7 +44,6 @@ function Produtos({ db }: DataBase) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Navbar />
       <main className='flex flex-col items-center min-h-screen w-full min-w-[320px]  bg-backgroundPink'>
         <h1 className='text-4xl text-white font-kalam mt-6'>Produtos</h1>
 
@@ -77,7 +74,6 @@ function Produtos({ db }: DataBase) {
           }
         </section>
       </main>
-      <Footer />
     </>
   )
 }

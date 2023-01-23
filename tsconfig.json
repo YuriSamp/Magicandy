@@ -31,8 +31,8 @@
     "utils/connect.ts",
     "pages/api/seeds.ts",
     "pages/api/seeds.ts",
-    "services/connect.ts",
-    "services/connect.ts",
+    "services/connect.js",
+    "services/connect.js",
     "components/Navbar/navbar.stories.mdx",
     "components/Navbar/navbar.stories.mdx"
   ],

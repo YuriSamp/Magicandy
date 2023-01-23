@@ -1,6 +1,4 @@
 import React from 'react'
-import Footer from '@ui/Footer'
-import Navbar from '@ui/Navbar'
 import CartItem from '@ui/CartItem'
 import Button from '@ui/Button'
 import { useRecoilState } from 'recoil'
@@ -60,7 +58,6 @@ function Cart() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Navbar />
       <main className='flex flex-col px-2 items-center justify-center py-4 bg-backgroundPink min-h-[calc(100vh-379px)]'>
 
         <div className='flex flex-col w-[80%] px-4 py-6 md:px-6 max-w-[1000px] items-center justify-center text-fontPurple border-fontPurple border-2 bg-white font-kalam rounded-lg'>
@@ -77,7 +74,6 @@ function Cart() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }

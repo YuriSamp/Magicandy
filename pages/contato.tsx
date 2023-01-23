@@ -1,6 +1,4 @@
 import React from 'react'
-import Footer from '@ui/Footer'
-import Navbar from '@ui/Navbar'
 import Button from '@ui/Button';
 import Fields from 'components/Fields/Fields';
 import Head from 'next/head';
@@ -26,7 +24,6 @@ function Contato() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Navbar />
       <main className='flex flex-col min-h-[80vh] px-4 py-4 items-center justify-center w-full min-w-[320px]  bg-backgroundPink' >
         <div className='flex rounded-lg border-2 border-fontPurple'>
           <Image src={FormImage} alt='' width={500} className='rounded-l-lg' />
@@ -80,7 +77,6 @@ function Contato() {
           </form>
         </div>
       </main>
-      <Footer />
     </>
   )
 }
