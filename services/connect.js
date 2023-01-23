@@ -15,6 +15,7 @@ async function connect() {
     }
     mongoose.disconnect;
   }
+  mongoose.set('strictQuery', false);
   const db = mongoose.connect(process.env.MONGODB_URI);
   connection.isConnected = db.connections[0].readyState;
 }

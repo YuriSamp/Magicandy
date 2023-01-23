@@ -7,6 +7,7 @@ Pages:
 - Refazer Home
 - Verificar se o produto existe, se n jogar pra pagina 404
 - Fazer uma renderização condicional da página de carrinho
+- 27 produtos
 
 UX/UI:
 
@@ -24,7 +25,6 @@ Performance:
 
 Features:
 
-- Criar um Desing System
 - Autentificação do administrador
 - Incluir ação de remover do carrinho.
 - Integração com o Stripe

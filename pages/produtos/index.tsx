@@ -32,11 +32,11 @@ function Produtos({ db }: DataBase) {
   const [name, setName] = useState('')
   const [type, setType] = useState('Todos')
 
-  // const dbFiltrado = db.filter(item => {
-  //   const titleNormalized = item.ProductTitle.toLocaleLowerCase()
-  //   const searchValueNormalized = name.toLowerCase()
-  //   return titleNormalized.includes(searchValueNormalized)
-  // })
+  const dbFiltrado = db.filter(item => {
+    const titleNormalized = item.ProductTitle.toLocaleLowerCase()
+    const searchValueNormalized = name.toLowerCase()
+    return titleNormalized.includes(searchValueNormalized)
+  })
 
   return (
     <>
@@ -64,7 +64,7 @@ function Produtos({ db }: DataBase) {
         </div>
         <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 py-16 border-b-2 border-fontPurple items-center justify-evenly flex-wrap">
           {
-            db.map(product => (
+            dbFiltrado.map(product => (
               <Card
                 key={product._id}
                 _id={product._id}
