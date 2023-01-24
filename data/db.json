@@ -33,7 +33,7 @@
     "ProductTitle": "Bolo Red Velvet",
     "ProductPrice": 90,
     "Description": "A Torta Red Velvet é um verdadeiro deleite para os sentidos. Com sua cor vermelha vibrante e sua textura macia e úmida, este bolo é uma verdadeira obra-prima culinária. A cobertura de cream cheese adiciona um toque de acidez que equilibra perfeitamente o sabor doce do bolo. Ideal para ocasiões especiais como o dia dos namorados, Natal ou aniversários, este bolo é a escolha perfeita para surpreender e encantar seus convidados. Experimente hoje mesmo e descubra por que o Bolo de Veludo Vermelho é tão amado e apreciado.",
-    "Category": "Bolo"
+    "Category": "Bolos"
   },
   {
     "Id": 5,
@@ -42,7 +42,7 @@
     "ProductTitle": "Bolo de Morango",
     "ProductPrice": 90,
     "Description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae placeat est aspernatur assumenda id quisquam voluptas molestias. Amet, sunt ab repellendus reprehenderit aliquam excepturi sed nulla architecto sit deleniti sequi.",
-    "Category": "Bolo"
+    "Category": "Bolos"
   },
   {
     "Id": 6,
@@ -69,7 +69,7 @@
     "ProductTitle": "Mousse de chocolate",
     "ProductPrice": 20,
     "Description": "A mousse de chocolate é a escolha perfeita para aqueles que amam chocolate. É uma sobremesa elegante e sofisticada feita com chocolate de qualidade e ingredientes selecionados. A textura é macia e sedosa, com um sabor intenso e delicioso de chocolate. A cobertura é feita com chocolate derretido e raspas de chocolate, dando um toque final perfeito. Ideal para ser servido em ocasiões especiais, como jantares, aniversários, e como sobremesa de final de refeição. Experimente hoje e desfrute da delicadeza e sabor intenso da nossa mousse de chocolate.",
-    "Category": "Mousse"
+    "Category": "Mousses"
   },
   {
     "Id": 9,
@@ -78,7 +78,7 @@
     "ProductTitle": "Tapioca de morango",
     "ProductPrice": 17,
     "Description": "A tapioca de morango é uma delícia refrescante e saudável. Ela é feita com farinha de tapioca e recheada com pedaços de morango frescos, dando um sabor adocicado e uma textura macia. Além disso, é uma opção vegana e sem glúten, tornando-a uma escolha perfeita para pessoas com restrições alimentares. O morango também é uma fonte de vitamina C e outros nutrientes. Experimente a nossa tapioca de morango hoje e desfrute de um sabor natural e delicioso.",
-    "Category": "Tapioca"
+    "Category": "Tapiocas"
   },
   {
     "Id": 10,

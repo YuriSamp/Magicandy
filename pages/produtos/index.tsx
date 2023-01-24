@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from '@ui/Card'
 import db from 'data/db.json'
 import Search from 'components/Search/Search'
@@ -21,20 +21,38 @@ export async function getServerSideProps() {
 
 
 function Produtos({ db }: DataBase) {
-  console.log(db)
+  const [name, setName] = useState('')
+  const [type, setType] = useState('')
+  const [dbType, setDbType] = useState(db)
+  const [dbFiltrado, setDbFiltrado] = useState(dbType)
+  
+
+  useEffect( () => {
+    if (type.toLowerCase() !== 'todos') {
+     const dbFiltrado = db.filter(item => {
+        const typeNormalized = item.Category?.toLocaleLowerCase()
+        const typeValueNormalized = type.toLowerCase()
+        return typeNormalized?.includes(typeValueNormalized)
+      })
+      setDbType(dbFiltrado)
+    } else {
+      setDbType(db)
+    }
+  }, [type]
+  )
 
   const onChangeHandler = (event: any) => {
     setName(event.target.value)
+    console.log(name)
+    const dbSearch = dbType.filter(item => {
+      const titleNormalized = item.ProductTitle.toLocaleLowerCase()
+      const searchValueNormalized = name.toLowerCase()
+      return titleNormalized.includes(searchValueNormalized)
+    })
+    setDbFiltrado(dbSearch)
   }
 
-  const [name, setName] = useState('')
-  const [type, setType] = useState('Todos')
-
-  const dbFiltrado = db.filter(item => {
-    const titleNormalized = item.ProductTitle.toLocaleLowerCase()
-    const searchValueNormalized = name.toLowerCase()
-    return titleNormalized.includes(searchValueNormalized)
-  })
+  
 
   return (
     <>
@@ -52,11 +70,14 @@ function Produtos({ db }: DataBase) {
 
           {/* //TODO  incluir rounded no dropdown */}
           <select id='filterSelect' className='py-2 px-4 w-[229px] text-center rounded-lg ring-fontPurple ring-2 bg-white'
-            onChange={e => setType(e.target.value)}>
+            onChange={e => setType(e.target.value) }>
             <option>Todos</option>
-            <option>Bolo</option>
-            <option>Torta</option>
-            <option>Donut</option>
+            <option>Bolos</option>
+            <option>Donuts</option>
+            <option>Brownies</option>
+            <option>Mousses</option>
+            <option>Tapiocas</option>
+            <option>Cupcakes</option>
           </select>
         </div>
         <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 py-16 border-b-2 border-fontPurple items-center justify-evenly flex-wrap">
