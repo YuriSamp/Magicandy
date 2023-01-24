@@ -5,7 +5,7 @@ import Product from 'models/product'
 import { DataBase } from 'interface/ServerSideDataBase'
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   dbConnect.connect()
   const database = await Product.find();
   dbConnect.disconnect()

@@ -32,7 +32,7 @@ function Contato() {
       </Head>
       <main className='flex flex-col min-h-[80vh] px-4 py-4 items-center justify-center w-full min-w-[320px]  bg-backgroundPink' >
         <div className='flex rounded-lg border-2 border-fontPurple'>
-          <Image src={FormImage} alt='' width={500} className='rounded-l-lg' />
+          <Image src={FormImage} alt='' width={500} className='rounded-l-lg' priority />
           <form
             className='flex flex-col gap-4 w-full max-w-[30rem] bg-backgroundWhite p-10 rounded-r-lg'
             onSubmit={onSubmitHandler}

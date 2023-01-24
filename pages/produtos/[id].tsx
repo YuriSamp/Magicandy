@@ -6,23 +6,28 @@ import dbConnect from 'services/connect'
 import Product from 'models/product'
 import { DataBase } from 'interface/ServerSideDataBase'
 import Head from 'next/head'
+import { GetServerSidePropsContext } from 'next'
 
 //TODO Revisar
 
-export async function getServerSideProps() {
-  dbConnect.connect()
-  const database = await Product.find();
-  dbConnect.disconnect()
-  return {
-    props: { db: JSON.parse(JSON.stringify(database)) }
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  try {
+    const id = (context.query.id)
+    dbConnect.connect()
+    const database = await Product.findById(id);
+    dbConnect.disconnect()
+    return {
+      props: { db: JSON.parse(JSON.stringify(database)) }
+    }
+  } catch {
+    return {
+      notFound: true
+    };
   }
 }
 
-const Post = ({ db }: DataBase) => {
-  const router = useRouter()
-  const { id } = router.query
-  const array = db.filter(item => item._id === id)
-
+const Post = (db: DataBase) => {
+  const arr = Object.values(db)
 
   return (
     <>
@@ -33,7 +38,7 @@ const Post = ({ db }: DataBase) => {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <main className='bg-backgroundPink flex justify-center items-center p-12 py-16'>
-        {array.map(item => (
+        {arr.map(item => (
           <div className='bg-white text-black rounded-lg drop-shadow-xl border-2 border-fontPurple p-2 max-w-[1000px]' key={item._id}>
             <div className='flex flex-col md:flex-row justify-between'>
               <Image src={item.Src} alt={item.Alt} width={500} height={400} className='rounded-lg w-full grow md:w-[50%]'></Image>
