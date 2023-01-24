@@ -18,6 +18,7 @@ function Cart() {
       Lista,
       FinalPrice
     }
+
     // const CartItem = {
     //   Name: props.Name,
     //   Quantity: value,
@@ -26,6 +27,11 @@ function Cart() {
     //   Image: props.Imagem
     // }
     // setCart((prevState) => [...prevState, CartItem])
+  }
+
+  const onDeleteHandler = (index:number, e: React.FormEvent<HTMLFormElement>) => {
+    let newList = Lista.filter( (item, arrIndex) => index !== arrIndex )
+    setLista(newList)
   }
 
   function Subtotal(ref: number) {
@@ -65,11 +71,11 @@ function Cart() {
           <h2 className='text-2xl font-semibold'>Lista de Produtos</h2>
           <div>
             {Lista.map((item, index) => (
-              <CartItem key={index} Name={item.Name} Imagem={item.Image} Quantity={item.Quantity} Price={item.Price} />
+              <CartItem key={index} Name={item.Name} Imagem={item.Image} Quantity={item.Quantity} Price={item.Price} OnDeleteHandler={onDeleteHandler} Index={index} />
             ))}
           </div>
           <div className='flex items-center gap=2 md:gap-52 '>
-            <Button value={"Finalizar compra"} href="../" type="LINK" />
+            <Button value={"Finalizar compra"} href="../" type="LINK"  />
             {Subtotal(Lista.length)}
           </div>
         </div>

@@ -14,10 +14,11 @@ export const CartAtom = atom<CartItem[]>({
   default: [],
 });
 
-export const Cart = atom<CartItem[]>({
-  key: 'cart',
-  default: [],
-});
+//? ta usando esse Cart pra alguma coisa?
+// export const Cart = atom<CartItem[]>({
+//   key: 'cart',
+//   default: [],
+// });
 
 export const Database = atom<IProduto[]>({
   key: 'Database',

@@ -2,20 +2,23 @@ import Button from '@ui/Button';
 import Image from 'next/image'
 import React from 'react'
 import { FormataBRL } from 'utils/ConvertCurrency'
+import { FaTrashAlt } from 'react-icons/Fa'
 
 interface Props {
   Quantity: number;
   Price: number;
   Imagem: string;
   Name: string;
+  OnDeleteHandler: any;
+  Index: number;
 }
 
 
 
 function CartItem(props: Props) {
-
+  console.log(props.OnDeleteHandler)
   return (
-    <div className='flex flex-row flex-wrap gap-2 items-center w-full max-w-[700px] border-fontPurple border-2 rounded-lg my-4 overflow-hidden'>
+    <div data-index={props.Index} className='flex flex-row flex-wrap gap-2 items-center w-full max-w-[700px] border-fontPurple border-2 rounded-lg my-4 overflow-hidden'>
       <Image
         className='w-full h-full md:w-[300px] self-center'
         width={300}
@@ -30,7 +33,13 @@ function CartItem(props: Props) {
           <span>Valor unitário: {FormataBRL(props.Price)}</span>
         </div>
         <div className='px-4 flex items-center md:self-start'>
-          <Button value={"Deletar"} />
+          <input 
+            className='text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-backgroundPink font-kalam rounded-lg select-none'
+            type="button"
+            value={"Deletar"}
+            onClick={(e) => props.OnDeleteHandler(props.Index, e)}
+          />
+          
         </div>
       </div>
     </div>
