@@ -8,7 +8,7 @@ const Navbar = () => {
         <>
             <nav className="flex flex-col lg:flex-row lg:px-48 gap-8 lg:gap-0  py-5 border-b-2 border-fontPurple items-center justify-between bg-backgroundWhite">
                 <Link href="/">
-                    <Image className="w-[200px]" src={logo} alt="Logo da Confeitaria Magicandy." />
+                    <Image className="w-[125px]" src={logo} alt="Logo da Confeitaria Magicandy." />
                 </Link>
                 <ul className="flex flex-col md:flex-row gap-2 md:gap-8 font-kalam">
                     <li><Link href="/" className='text-fontPurple text-xl lg:text-2xl' >Home</Link></li>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Card from '@ui/Card'
-import db from 'data/db.json'
 import Search from 'components/Search/Search'
 import Product from 'models/product';
 import dbConnect from 'services/connect';
@@ -10,7 +9,7 @@ import Head from 'next/head'
 //TODO deixar com background white para padronizar
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   dbConnect.connect()
   const database = await Product.find();
   dbConnect.disconnect()
@@ -22,37 +21,41 @@ export async function getServerSideProps() {
 
 function Produtos({ db }: DataBase) {
   const [name, setName] = useState('')
-  const [type, setType] = useState('')
-  const [dbType, setDbType] = useState(db)
-  const [dbFiltrado, setDbFiltrado] = useState(dbType)
-  
+  const [type, setType] = useState('Todos')
+  const [dbFiltrado, setDbFiltrado] = useState(db)
 
-  useEffect( () => {
-    if (type.toLowerCase() !== 'todos') {
-     const dbFiltrado = db.filter(item => {
-        const typeNormalized = item.Category?.toLocaleLowerCase()
-        const typeValueNormalized = type.toLowerCase()
-        return typeNormalized?.includes(typeValueNormalized)
-      })
-      setDbType(dbFiltrado)
-    } else {
-      setDbType(db)
+  function Compare(string1: string, string2: string) {
+    const titleNormalized = string1.toLocaleLowerCase()
+    const searchValueNormalized = string2.toLowerCase()
+    return titleNormalized.includes(searchValueNormalized)
+  }
+
+  useEffect(() => {
+    if (type === 'Todos' && name === '') {
+      setDbFiltrado(db)
     }
 
-    const dbSearch = dbType.filter(item => {
-      const titleNormalized = item.ProductTitle.toLocaleLowerCase()
-      const searchValueNormalized = name.toLowerCase()
-      return titleNormalized.includes(searchValueNormalized)
-    })
-    setDbFiltrado(dbSearch)
-  }, [type, name, dbType, db]
-  )
+    if (type !== 'Todos' && name === '') {
+      const dbFiltrado = db.filter(item => item.Category?.toLowerCase() === type.toLowerCase())
+      setDbFiltrado(dbFiltrado)
+    }
+
+    if (type === 'Todos' && name !== '') {
+      const dbSearch = db.filter(item => Compare(item.ProductTitle, name))
+      setDbFiltrado(dbSearch)
+    }
+
+    if (type !== 'Todos' && name !== '') {
+      const dbFiltrado = db.filter(item => item.Category?.toLowerCase() === type.toLowerCase())
+      const dbSearch = dbFiltrado.filter(item => Compare(item.ProductTitle, name))
+      setDbFiltrado(dbSearch)
+    }
+  }, [type, name])
+
 
   const onChangeHandler = (event: any) => {
     setName(event.target.value)
   }
-
-  
 
   return (
     <>
@@ -70,7 +73,7 @@ function Produtos({ db }: DataBase) {
 
           {/* //TODO  incluir rounded no dropdown */}
           <select id='filterSelect' className='py-2 px-4 w-[229px] text-center rounded-lg ring-fontPurple ring-2 bg-white'
-            onChange={e => setType(e.target.value) }>
+            onChange={e => setType(e.target.value)}>
             <option>Todos</option>
             <option>Bolos</option>
             <option>Donuts</option>

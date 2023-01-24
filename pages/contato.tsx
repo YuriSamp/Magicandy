@@ -4,6 +4,7 @@ import Fields from 'components/Fields/Fields';
 import Head from 'next/head';
 import Image from 'next/image';
 import FormImage from 'public/form.png'
+import Swal from 'sweetalert2'
 
 // type Inputs = {
 //   Nome: string,
@@ -14,7 +15,12 @@ import FormImage from 'public/form.png'
 // };
 
 function Contato() {
-  const onSubmitHandler = () => { };
+  const onSubmitHandler = () => {
+    Swal.fire({
+      icon: 'success',
+      text: 'A sua mensagem foi enviada para o nosso email',
+    })
+  };
 
   return (
     <>

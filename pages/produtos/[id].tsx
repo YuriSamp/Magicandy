@@ -19,10 +19,10 @@ export async function getServerSideProps() {
 }
 
 const Post = ({ db }: DataBase) => {
-  console.log(db)
   const router = useRouter()
   const { id } = router.query
   const array = db.filter(item => item._id === id)
+
 
   return (
     <>

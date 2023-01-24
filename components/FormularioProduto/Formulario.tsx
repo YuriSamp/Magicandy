@@ -4,6 +4,7 @@ import { FormataBRL } from 'utils/ConvertCurrency';
 import Button from '@ui/Button';
 import { useRecoilState } from 'recoil'
 import { CartAtom, CartItem } from 'context/Atom'
+import Swal from 'sweetalert2'
 interface Props {
   Price: number,
   _id: string,
@@ -41,6 +42,12 @@ function FormularioProduto(props: Props) {
       Price: props.Price,
       Image: props.Imagem
     }
+
+    Swal.fire({
+      icon: 'success',
+      text: 'O seu pedido foi adicionado ao carrinho',
+    })
+
     setCart((prevState) => [...prevState, CartItem])
   }
 

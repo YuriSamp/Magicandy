@@ -1,7 +1,5 @@
 import React from 'react'
 import Button from '@ui/Button'
-import Footer from '@ui/Footer'
-import Navbar from '@ui/Navbar'
 import Head from 'next/head'
 import Image from 'next/image'
 import NotFound from 'public/page404.png'
@@ -18,9 +16,9 @@ export default function Custom404() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <main className='bg-backgroundPink min-h-[calc(100vh-379px)] flex justify-center items-center'>
+      <main className='bg-backgroundPink min-h-[calc(100vh-316px)] flex justify-center items-center'>
         <div className='px-48 flex items-center gap-32'>
-          <div className='flex flex-col items-center'>
+          <div className='flex flex-col items-center '>
             <p className='font-kalam text-2xl'>Não achou o que estava procurando?</p>
             <div className='flex items-center'>
               <AiOutlineArrowLeft />
