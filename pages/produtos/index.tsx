@@ -38,18 +38,18 @@ function Produtos({ db }: DataBase) {
     } else {
       setDbType(db)
     }
-  }, [type]
-  )
 
-  const onChangeHandler = (event: any) => {
-    setName(event.target.value)
-    console.log(name)
     const dbSearch = dbType.filter(item => {
       const titleNormalized = item.ProductTitle.toLocaleLowerCase()
       const searchValueNormalized = name.toLowerCase()
       return titleNormalized.includes(searchValueNormalized)
     })
     setDbFiltrado(dbSearch)
+  }, [type, name, dbType, db]
+  )
+
+  const onChangeHandler = (event: any) => {
+    setName(event.target.value)
   }
 
   
