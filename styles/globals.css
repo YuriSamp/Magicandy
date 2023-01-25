@@ -49,3 +49,27 @@ input[type='range']::-webkit-slider-thumb {
   background: #8c52ff;
   border-radius: 50%;
 }
+
+nav a {
+  position: relative;
+}
+
+
+nav a::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0;
+  border-bottom: solid 2px ;
+  bottom: 0;
+  right: 0;
+  
+}
+
+nav a:hover::after {
+  animation: navHoverEffect 0.5s forwards;
+}
+
+@keyframes navHoverEffect {
+  to {width: 100%}
+}
