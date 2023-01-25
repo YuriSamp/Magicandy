@@ -20,7 +20,7 @@ const Button = (props: Props) => {
         )
     }
     return (
-        <button className='text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-backgroundPink font-kalam rounded-lg select-none'>
+        <button className='cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-backgroundPink font-kalam rounded-lg select-none'>
             {props.value}
         </button>
     )

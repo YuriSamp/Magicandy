@@ -26,7 +26,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   }
 }
 
-const Post = (db: DataBase) => {
+const UniqueProduct = (db: DataBase) => {
   const arr = Object.values(db)
 
   return (
@@ -62,4 +62,4 @@ const Post = (db: DataBase) => {
   )
 }
 
-export default Post
+export default UniqueProduct
