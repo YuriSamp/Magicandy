@@ -2,7 +2,7 @@ import Button from '@ui/Button';
 import Image from 'next/image'
 import React from 'react'
 import { FormataBRL } from 'utils/ConvertCurrency'
-import { FaTrashAlt } from 'react-icons/Fa'
+
 
 interface Props {
   Quantity: number;
@@ -33,15 +33,15 @@ function CartItem(props: Props) {
           <span>Valor unitário: {FormataBRL(props.Price)}</span>
         </div>
         <div className='px-4 flex items-center md:self-start'>
-          <button 
+          <button
             className='cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-backgroundPink font-kalam rounded-lg select-none'
             type="button"
             onClick={(e) => props.OnDeleteHandler(props.Index, e)}
           >
             Deletar
           </button>
-          
-          
+
+
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import FormImage from 'public/form.png'
 import Swal from 'sweetalert2'
 
+
 // type Inputs = {
 //   Nome: string,
 //   Email: string,

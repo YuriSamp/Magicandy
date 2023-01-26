@@ -6,8 +6,6 @@ import dbConnect from 'services/connect';
 import { DataBase } from 'interface/ServerSideDataBase'
 import Head from 'next/head'
 
-//TODO deixar com background white para padronizar
-
 
 export async function getStaticProps() {
   dbConnect.connect()

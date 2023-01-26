@@ -8,7 +8,6 @@ import { DataBase } from 'interface/ServerSideDataBase'
 import Head from 'next/head'
 import { GetServerSidePropsContext } from 'next'
 
-//TODO Revisar
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   try {
