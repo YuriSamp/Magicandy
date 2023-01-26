@@ -1,6 +1,5 @@
 [
   {
-    "Id": 1,
     "Src": "/products/banana-cake.png",
     "Alt": "Bolo de banana.",
     "ProductTitle": "Bolo de Banana",
@@ -9,7 +8,6 @@
     "Category": "Bolos"
   },
   {
-    "Id": 2,
     "Src": "/products/macaron-cake.png",
     "Alt": "Bolo de Macaron.",
     "ProductTitle": "Bolo de Macaron",
@@ -18,7 +16,6 @@
     "Category": "Bolos"
   },
   {
-    "Id": 3,
     "Src": "/products/magicandy-cake.png",
     "Alt": "Bolo da Casa.",
     "ProductTitle": "Bolo da Casa",
@@ -27,7 +24,6 @@
     "Category": "Bolos"
   },
   {
-    "Id": 4,
     "Src": "/products/red-velvet-cake.png",
     "Alt": "Bolo Red Velvet.",
     "ProductTitle": "Bolo Red Velvet",
@@ -36,7 +32,6 @@
     "Category": "Bolos"
   },
   {
-    "Id": 5,
     "Src": "/products/strawberry-cake.png",
     "Alt": "Bolo de Morango.",
     "ProductTitle": "Bolo de Morango",
@@ -45,7 +40,6 @@
     "Category": "Bolos"
   },
   {
-    "Id": 6,
     "Src": "/products/brownie-morango.png",
     "Alt": "Brownie de morango",
     "ProductTitle": "Brownie de morango",
@@ -54,7 +48,22 @@
     "Category": "Brownies"
   },
   {
-    "Id": 7,
+    "Src": "/products",
+    "Alt": "Brownie de Chocolate Branco",
+    "ProductTitle": "Brownie de Chocolate Branco",
+    "ProductPrice": 14,
+    "Description": "Um brownie de chocolate branco é uma variação deliciosa do brownie tradicional. Ele é feito com chocolate branco e farinha de trigo e tem um sabor doce e cremoso. Ele é geralmente coberto com uma camada de chocolate branco derretido ou frutas frescas. É perfeito para ser servido com uma bola de sorvete ou como uma sobremesa para festas. É uma sobremesa fácil de fazer, mas tem um sabor incrível.",
+    "Category": "Brownies"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Brownie de Nozes",
+    "ProductTitle": "Brownie de Nozes",
+    "ProductPrice": 15,
+    "Description": "Um brownie de nozes é uma variação deliciosa do brownie tradicional. Ele é feito com nozes trituradas e chocolate, o que lhe dá um sabor crocante e uma textura aveludada. A combinação de nozes e chocolate é perfeita e faz com que seja uma sobremesa perfeita para aqueles que gostam de doces. É uma sobremesa fácil de fazer e é perfeito para festas e ocasiões especiais.",
+    "Category": "Brownies"
+  },
+  {
     "Src": "/products/mousse-morango.png",
     "Alt": "Mousse de morango",
     "ProductTitle": "Mousse de morango",
@@ -63,7 +72,6 @@
     "Category": "Mousses"
   },
   {
-    "Id": 8,
     "Src": "/products/mousse-chocolate.png",
     "Alt": "Mousse de chocolate",
     "ProductTitle": "Mousse de chocolate",
@@ -72,7 +80,14 @@
     "Category": "Mousses"
   },
   {
-    "Id": 9,
+    "Src": "/products",
+    "Alt": "Mousse de Limão",
+    "ProductTitle": "Mousse de Limão",
+    "ProductPrice": 30,
+    "Description": "Uma mousse de limão é uma sobremesa cítrica e refrescante feita com suco e raspas de limão e creme de leite. O limão é de qualidade superior e dá ao doce um sabor cítrico e equilibrado. O creme de leite adiciona uma textura suave e aveludada que se dissolva na boca. A mousse é servida gelada e pode ser decorada com chantilly, frutas frescas ou raspas de chocolate. É perfeita para ser servida como sobremesa após um jantar elegante ou como doce para um café da tarde.",
+    "Category": "Mousses"
+  },
+  {
     "Src": "/products/tapioca-morango.png",
     "Alt": "Tapioca de morango",
     "ProductTitle": "Tapioca de morango",
@@ -81,7 +96,6 @@
     "Category": "Tapiocas"
   },
   {
-    "Id": 10,
     "Src": "/products/tapioca-confete.png",
     "Alt": "Tapioca de confete",
     "ProductTitle": "Tapioca de confete",
@@ -90,7 +104,6 @@
     "Category": "Tapiocas"
   },
   {
-    "Id": 11,
     "Src": "/products/donuts-creme-granulado.png",
     "Alt": "Donuts",
     "ProductTitle": "Donuts",
@@ -99,12 +112,195 @@
     "Category": "Donuts"
   },
   {
-    "Id": 12,
+    "Src": "/products/jelly-donut.png",
+    "Alt": "Donut recheado com geleia.",
+    "ProductTitle": "Donut Recheado com Geleia",
+    "ProductPrice": 4.0,
+    "Description": "Um donut recheado com geleia é uma variação deliciosa e divertida do clássico donut glaceado. Ele é feito com massa de donut macia e fofa, recheado com geleia de frutas variadas. A geleia pode ser feita com morangos, framboesas, cerejas ou qualquer outra fruta que você goste. O sabor adocicado e suculento da geleia combina perfeitamente com a textura macia e fofa da massa do donut. Eles são perfeitos para um café da manhã ou lanche da tarde, e também podem ser servidos como sobremesa. Além disso, eles são muito fáceis de fazer e podem ser personalizados de acordo com as preferências do cliente.",
+    "Category": "Donuts"
+  },
+  {
     "Src": "/products/cupcake-morango.png",
     "Alt": "Cupcake de morango",
     "ProductTitle": "Cupcake de morango",
     "ProductPrice": 20,
     "Description": "Os cupcakes de morango são pequenas obras-primas culinárias, perfeitas para qualquer ocasião especial. Cada um é feito à mão com morangos frescos e ingredientes de qualidade, resultando em uma massa macia e saborosa. A cobertura é feita de chantilly e morangos frescos, dando um toque final perfeito. O sabor do morango é suavemente equilibrado com a doçura do cupcake, criando uma harmonia perfeita de sabores. Estes cupcakes são tão bonitos quanto deliciosos, e são uma escolha perfeita para festas, aniversários, ou qualquer outra ocasião especial. Experimente um hoje e experimente a delicadeza de um verdadeiro cupcake de morango.",
     "Category": "Cupcakes"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Cupcake de Limão",
+    "ProductTitle": "Cupcake de Limão",
+    "ProductPrice": 8,
+    "Description": "Este refrescante cupcake de limão é feito com uma massa macia e fofa, recheado com um creme de limão fresco e coberto com chantilly e raspas de limão. É perfeito para aqueles que amam o sabor cítrico e é ideal para festas de aniversário, eventos ou simplesmente como uma sobremesa para um dia especial.",
+    "Category": "Cupcakes"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Cupcake de Baunilha",
+    "ProductTitle": "Cupcake de Baunilha",
+    "ProductPrice": 8,
+    "Description": "Este clássico cupcake de baunilha é feito com uma massa macia e fofa, recheado com um creme de baunilha fresco e coberto com chantilly. É perfeito para aqueles que amam o sabor tradicional e é ideal para festas de aniversário, eventos ou simplesmente como uma sobremesa para um dia especial.",
+    "Category": "Cupcakes"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Torta de Maçã",
+    "ProductTitle": "Torta de Maçã",
+    "ProductPrice": 25,
+    "Description": "Uma deliciosa torta de maçã feita com maçãs frescas e crosta de massa folhada. O recheio é feito com maçãs raspadas, açúcar e especiarias, dando um sabor doce e picante. A crosta é crocante e a massa é macia e deliciosa. Perfeito para o café da manhã ou lanche da tarde.",
+    "Category": "Tortas"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Torta de Morango",
+    "ProductTitle": "Torta de Morango",
+    "ProductPrice": 30,
+    "Description": "Uma torta deliciosa e fresca feita com morangos frescos e crosta de massa folhada. O recheio é feito com morangos picados, açúcar e gelatina, dando um sabor doce e refrescante. A crosta é crocante e a massa é macia e deliciosa. Perfeito para o café da manhã ou lanche da tarde.",
+    "Category": "Tortas"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Torta de Limão",
+    "ProductTitle": "Torta de Limão",
+    "ProductPrice": 35,
+    "Description": "Uma torta cítrica e refrescante feita com limões frescos e crosta de massa folhada. O recheio é feito com limão raspado, açúcar e gemas, dando um sabor cítrico e doce. A crosta é crocante e a massa é macia e deliciosa. Perfeito para o café da manhã ou lanche da tarde.",
+    "Category": "Tortas"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Torta de Chocolate",
+    "ProductTitle": "Torta de Chocolate",
+    "ProductPrice": 40,
+    "Description": "Uma torta de chocolate escura e intensa feita com chocolate amargo e crosta de massa folhada. O recheio é feito com chocolate derretido, açúcar e creme de leite, dando um sabor doce e cremoso. A crosta é crocante e a massa é macia e deliciosa. Perfeito para o café da manhã ou lanche da tarde.",
+    "Category": "Tortas"
+  },
+  {
+    "Src": "/products/palha-italiana.png",
+    "Alt": "Palha Italiana",
+    "ProductTitle": "Palha Italiana",
+    "ProductPrice": 15,
+    "Description": "A palha italiana é uma sobremesa tradicional feita com massa folhada crocante e recheada com doce de leite. É um delicioso e saboroso doce que pode ser encontrado em muitos cafés e padarias. A massa folhada crocante se combina perfeitamente com o doce de leite cremoso e dá um contraste perfeito de texturas. É uma sobremesa perfeita para compartilhar com amigos e familiares ou para se deliciar sozinho. É ideal para o café da manhã, lanche da tarde ou como sobremesa para o jantar. ",
+    "Category": "Sobremesas"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Geleia de Morango",
+    "ProductTitle": "Geleia de Morango",
+    "ProductPrice": 15,
+    "Description": "A geleia de morango é feita com morangos frescos e açúcar, tem um sabor intenso e adocicado. É perfeita para ser usada em bolos, pães, waffles ou até mesmo para ser comida pura. Com uma textura agradável e um sabor delicioso, ela é uma ótima opção para aqueles que gostam de doces. É uma opção saudável para ser consumida no café da manhã ou lanche da tarde.",
+    "Category": "Geleias"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Torta de Pêssego",
+    "ProductTitle": "Torta de Pêssego",
+    "ProductPrice": 35,
+    "Description": "Uma torta de pêssego é uma sobremesa deliciosa e refrescante, perfeita para o verão. Ela é feita com pêssegos frescos e maduros, que lhe dão um sabor doce e suculento. A massa é crocante e macia, com uma textura delicada que se dissolve na boca. O recheio é feito com pêssegos fatiados e um toque de açúcar, o que equilibra perfeitamente o sabor. A cobertura é feita com chantilly e pêssegos frescos, o que não só melhora o sabor, mas também o torna atraente visualmente. Ideal para festas de verão, aniversários e outras ocasiões especiais, esta torta é certa de agradar a todos.",
+    "Category": "Tortas"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Torta Charlotte",
+    "ProductTitle": "Torta Charlotte",
+    "ProductPrice": 60,
+    "Description": "Uma torta charlotte é uma sobremesa tradicional francesa feita com pão de ló, creme de leite, frutas e gelatina. O pão de ló é umedecido com calda de açúcar e recheado com creme de leite e frutas frescas, geralmente morangos ou pêssegos. A torta é então coberta com gelatina, o que lhe dá uma textura macia e suave. O sabor é doce e refrescante, perfeito para o verão. É uma sobremesa elegante e sofisticada, ideal para ocasiões especiais como jantares de gala ou festas de aniversário.",
+    "Category": "Tortas"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Pavê de Chocolat",
+    "ProductTitle": "Pavê de Chocolate",
+    "ProductPrice": 60,
+    "Description": "O pavê de chocolate é um delicioso e clássico doce feito com camadas de bolacha, recheio de chocolate e chantilly. Ele tem um sabor intenso e suave ao mesmo tempo, combinando perfeitamente o sabor do chocolate com a cremosidade do chantilly. Perfeito para ser servido em festas e ocasiões especiais, este pavê é certo de agradar a todos os paladares.",
+    "Category": "Pavês"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Pavê de Morango",
+    "ProductTitle": "Pavê de Morango",
+    "ProductPrice": 70,
+    "Description": "O pavê de morango é uma deliciosa sobremesa feita com camadas de bolacha, recheio de morangos e chantilly. Ele tem um sabor fresco e leve, combinando perfeitamente o sabor dos morangos com a cremosidade do chantilly. Perfeito para ser servido em festas e ocasiões especiais, este pavê é certo de agradar a todos os paladares.",
+    "Category": "Pavês"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Pavê de Limão",
+    "ProductTitle": "Pavê de Limão",
+    "ProductPrice": 65,
+    "Description": "O pavê de limão é uma deliciosa sobremesa feita com camadas de bolacha, recheio de limão e chantilly. Ele tem um sabor cítrico e refrescante, combinando perfeitamente o sabor do limão com a cremosidade do chantilly. Perfeito para ser servido em festas e ocasiões especiais, este pavê é certo de agradar a todos os paladares.",
+    "Category": "Pavês"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Pavê de Maracujá",
+    "ProductTitle": "Pavê de Maracujá",
+    "ProductPrice": 70,
+    "Description": "O pavê de maracujá é uma deliciosa sobremesa feita com camadas de bolacha, recheio de maracujá e chantilly. Ele tem um sabor tropical e exótico, combinando perfeitamente o sabor do maracujá com a cremosidade do chantilly. Perfeito para ser servido em festas e ocasiões especiais, este pavê é certo de agradar a todos os paladares.",
+    "Category": "Pavês"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Torta de Coco",
+    "ProductTitle": "Torta de Coco",
+    "ProductPrice": 55,
+    "Description": "Uma deliciosa torta de coco é a escolha perfeita para quem gosta de sobremesas de coco. A massa crocante é preenchida com uma mistura de coco ralado e leite condensado, dando-lhe um sabor doce e adocicado. A cobertura é feita com chantilly e coco ralado, o que a torna ainda mais irresistível. Ideal para ocasiões especiais ou simplesmente para saborear com a família e amigos.",
+    "Category": "Tortas"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Torta de Doce de Leite",
+    "ProductTitle": "Torta de Doce de Leite",
+    "ProductPrice": 50,
+    "Description": "A torta de doce de leite é uma sobremesa clássica e deliciosa, feita com massa de biscoito e recheio de doce de leite. Ela é perfeita para ser servida em festas de aniversário, encontros familiares e outras ocasiões especiais. Com seu sabor cremoso e adocicado, a torta de doce de leite é um sucesso garantido entre crianças e adultos.",
+    "Category": "Tortas"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Torta de Maracujá",
+    "ProductTitle": "Torta de Maracujá",
+    "ProductPrice": 55,
+    "Description": "A torta de maracujá é uma deliciosa sobremesa feita com massa de biscoito e recheio de maracujá. Ela tem um sabor tropical e refrescante, combinando perfeitamente o sabor do maracujá com a crocância da massa de biscoito. Perfeita para ser servida em festas e ocasiões especiais, esta torta é certa de agradar a todos os paladares.",
+    "Category": "Tortas"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Cupcake de Chocolate",
+    "ProductTitle": "Cupcake de Chocolate",
+    "ProductPrice": 15,
+    "Description": "Os cupcakes de chocolate são deliciosos bolinhos individuais feitos com massa de chocolate e cobertura de chocolate derretido. Eles são perfeitos para uma sobremesa rápida ou para serem levados como um lanche. Com seu sabor intenso de chocolate, esses cupcakes vão agradar a qualquer amante de chocolate.",
+    "Category": "Cupcakes"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Donut de Chocolate",
+    "ProductTitle": "Donut de Chocolate",
+    "ProductPrice": 8,
+    "Description": "Os donuts de chocolate são deliciosos anéis de massa frita recheados ou cobertos com chocolate. Eles são perfeitos para um café da manhã ou lanche da tarde. Com seu sabor intenso de chocolate, esses donuts serão um sucesso entre os amantes de chocolate.",
+    "Category": "Donuts"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Donut de Doce de Leite",
+    "ProductTitle": "Donut de Doce de Leite",
+    "ProductPrice": 8,
+    "Description": "Os donuts de doce de leite são deliciosos anéis de massa frita recheados ou cobertos com doce de leite. Eles são perfeitos para um café da manhã ou lanche da tarde. Com seu sabor cremoso e adocicado, esses donuts serão um sucesso entre todos os paladares.",
+    "Category": "Donuts"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Rocambole de Chocolate",
+    "ProductTitle": "Rocambole de Chocolate",
+    "ProductPrice": 20,
+    "Description": "Os Rocamboles de chocolate são deliciosos bolos enrolados recheados com creme de chocolate. Eles são perfeitos para uma sobremesa ou para serem levados como um lanche. Com seu sabor intenso de chocolate, esses rocamboles vão agradar a qualquer amante de chocolate.",
+    "Category": "Rocamboles"
+  },
+  {
+    "Src": "/products",
+    "Alt": "Rocambole de Doce de Leite",
+    "ProductTitle": "Rocambole de Doce de Leite",
+    "ProductPrice": 20,
+    "Description": "Os Rocamboles de doce de leite são deliciosos bolos enrolados recheados com doce de leite. Eles são perfeitos para uma sobremesa ou para serem levados como um lanche. Com seu sabor cremoso e adocicado, esses rocamboles serão um sucesso entre todos os paladares.",
+    "Category": "Rocamboles"
   }
 ]

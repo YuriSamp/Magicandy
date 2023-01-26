@@ -5,6 +5,7 @@ import Product from 'models/product';
 import dbConnect from 'services/connect';
 import { DataBase } from 'interface/ServerSideDataBase'
 import Head from 'next/head'
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 
 
 export async function getStaticProps() {
@@ -21,6 +22,7 @@ function Produtos({ db }: DataBase) {
   const [name, setName] = useState('')
   const [type, setType] = useState('Todos')
   const [dbFiltrado, setDbFiltrado] = useState(db)
+  const [Page, setPage] = useState(1)
 
   function Compare(string1: string, string2: string) {
     const titleNormalized = string1.toLocaleLowerCase()
@@ -55,6 +57,18 @@ function Produtos({ db }: DataBase) {
     setName(event.target.value)
   }
 
+  function handleQuantity(number: number, operation: string) {
+    const rangeOfSum = number >= 1 && number < 2
+    const rangeOfSubtraction = number > 1 && number <= 2
+    if (operation === 'SUM' && rangeOfSum) {
+      setPage(number + 1)
+    }
+
+    if (operation === 'SUBTRACTION' && rangeOfSubtraction)
+      setPage(number - 1)
+  }
+
+
   return (
     <>
       <Head>
@@ -63,7 +77,7 @@ function Produtos({ db }: DataBase) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <main className='flex flex-col items-center min-h-screen w-full min-w-[320px]  bg-backgroundPink'>
+      <main className='flex flex-col items-center min-h-screen w-full min-w-[320px]  bg-backgroundPink border-b-2 border-fontPurple'>
         <h1 className='text-4xl text-white font-kalam mt-6'>Produtos</h1>
 
         <div className='flex justify-center w-full flex-wrap gap-6 py-6'>
@@ -81,7 +95,7 @@ function Produtos({ db }: DataBase) {
             <option>Cupcakes</option>
           </select>
         </div>
-        <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 py-16 border-b-2 border-fontPurple items-center justify-evenly flex-wrap">
+        <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 pt-16 pb-8  items-center justify-evenly flex-wrap">
           {
             dbFiltrado.map(product => (
               <Card
@@ -95,6 +109,23 @@ function Produtos({ db }: DataBase) {
             ))
           }
         </section>
+        <div className='flex items-center gap-8 pb-8 '>
+          <button
+            className=' flex items-center justify-center gap-2 min-w-[110px] cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite font-kalam rounded-lg select-none'
+            onClick={() => handleQuantity(Page, "SUBTRACTION")}
+          >
+            <AiOutlineArrowLeft />
+            Voltar
+          </button>
+          <p className='font-kalam text-xl'>Página {Page} / 2</p>
+          <button
+            className='flex items-center justify-center gap-2 min-w-[110px] cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite  font-kalam rounded-lg select-none'
+            onClick={() => handleQuantity(Page, "SUM")}
+          >
+            Avançar
+            <AiOutlineArrowRight />
+          </button>
+        </div>
       </main>
     </>
   )
