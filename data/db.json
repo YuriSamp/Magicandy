@@ -56,7 +56,7 @@
     "Category": "Brownies"
   },
   {
-    "Src": "/products",
+    "Src": "/products/brownie-nozes.png",
     "Alt": "Brownie de Nozes",
     "ProductTitle": "Brownie de Nozes",
     "ProductPrice": 15,
@@ -80,7 +80,7 @@
     "Category": "Mousses"
   },
   {
-    "Src": "/products",
+    "Src": "/products/mousse-limao.png",
     "Alt": "Mousse de Limão",
     "ProductTitle": "Mousse de Limão",
     "ProductPrice": 30,
@@ -256,7 +256,7 @@
     "Category": "Tortas"
   },
   {
-    "Src": "/products",
+    "Src": "/products/torta-maracuja.png",
     "Alt": "Torta de Maracujá",
     "ProductTitle": "Torta de Maracujá",
     "ProductPrice": 55,
