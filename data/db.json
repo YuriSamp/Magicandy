@@ -48,7 +48,7 @@
     "Category": "Brownies"
   },
   {
-    "Src": "/products",
+    "Src": "/products/brownie-chocolate-branco.png",
     "Alt": "Brownie de Chocolate Branco",
     "ProductTitle": "Brownie de Chocolate Branco",
     "ProductPrice": 14,
@@ -216,7 +216,7 @@
     "Category": "Pavês"
   },
   {
-    "Src": "/products",
+    "Src": "/products/pave-morango.png",
     "Alt": "Pavê de Morango",
     "ProductTitle": "Pavê de Morango",
     "ProductPrice": 70,
@@ -224,7 +224,7 @@
     "Category": "Pavês"
   },
   {
-    "Src": "/products",
+    "Src": "/products/pave-limao.png",
     "Alt": "Pavê de Limão",
     "ProductTitle": "Pavê de Limão",
     "ProductPrice": 65,
