@@ -43,7 +43,7 @@
     "Src": "/products/brownie-morango.png",
     "Alt": "Brownie de morango",
     "ProductTitle": "Brownie de morango",
-    "ProductPrice": 20,
+    "ProductPrice": 15,
     "Description": "Um brownie de morango é uma sobremesa deliciosa e saudável, perfeita para todas as ocasiões. Ele é preparado com morangos frescos, que lhe dão um sabor natural e irresistível. A massa é crocante por fora e macia por dentro, com um sabor que mistura o sabor do morango e do chocolate. O sabor do morango é equilibrado com a doçura da massa, o que o torna uma escolha perfeita para aqueles que gostam de doces. A cobertura é feita com morangos frescos e chantilly, o que não só melhora o sabor, mas também o torna atraente visualmente. Ideal para festas de verão, aniversários e outras ocasiões especiais, este brownie é certo de agradar a todos.",
     "Category": "Brownies"
   },
@@ -67,7 +67,7 @@
     "Src": "/products/mousse-morango.png",
     "Alt": "Mousse de morango",
     "ProductTitle": "Mousse de morango",
-    "ProductPrice": 15,
+    "ProductPrice": 22,
     "Description": "A mousse de morango é a escolha perfeita para aqueles que amam o sabor fresco e adocicado do morango. É uma sobremesa elegante e sofisticada feita com morangos frescos e ingredientes selecionados. A textura é macia e sedosa, com um sabor intenso e delicioso de morango. A cobertura é feita com morangos frescos e chantilly, dando um toque final perfeito. Ideal para ser servido em ocasiões especiais, como jantares, aniversários, e como sobremesa de final de refeição. Experimente hoje e desfrute da delicadeza e sabor fresco da nossa mousse de morango.",
     "Category": "Mousses"
   },
@@ -83,7 +83,7 @@
     "Src": "/products/mousse-limao.png",
     "Alt": "Mousse de Limão",
     "ProductTitle": "Mousse de Limão",
-    "ProductPrice": 30,
+    "ProductPrice": 22,
     "Description": "Uma mousse de limão é uma sobremesa cítrica e refrescante feita com suco e raspas de limão e creme de leite. O limão é de qualidade superior e dá ao doce um sabor cítrico e equilibrado. O creme de leite adiciona uma textura suave e aveludada que se dissolva na boca. A mousse é servida gelada e pode ser decorada com chantilly, frutas frescas ou raspas de chocolate. É perfeita para ser servida como sobremesa após um jantar elegante ou como doce para um café da tarde.",
     "Category": "Mousses"
   },
@@ -115,7 +115,7 @@
     "Src": "/products/donuts-geleia.png",
     "Alt": "Donut recheado com geleia.",
     "ProductTitle": "Donut Recheado com Geleia",
-    "ProductPrice": 4.0,
+    "ProductPrice": 13,
     "Description": "Um donut recheado com geleia é uma variação deliciosa e divertida do clássico donut glaceado. Ele é feito com massa de donut macia e fofa, recheado com geleia de frutas variadas. A geleia pode ser feita com morangos, framboesas, cerejas ou qualquer outra fruta que você goste. O sabor adocicado e suculento da geleia combina perfeitamente com a textura macia e fofa da massa do donut. Eles são perfeitos para um café da manhã ou lanche da tarde, e também podem ser servidos como sobremesa. Além disso, eles são muito fáceis de fazer e podem ser personalizados de acordo com as preferências do cliente.",
     "Category": "Donuts"
   },
@@ -131,7 +131,7 @@
     "Src": "/products/cupcake-limao.png",
     "Alt": "Cupcake de Limão",
     "ProductTitle": "Cupcake de Limão",
-    "ProductPrice": 8,
+    "ProductPrice": 15,
     "Description": "Este refrescante cupcake de limão é feito com uma massa macia e fofa, recheado com um creme de limão fresco e coberto com chantilly e raspas de limão. É perfeito para aqueles que amam o sabor cítrico e é ideal para festas de aniversário, eventos ou simplesmente como uma sobremesa para um dia especial.",
     "Category": "Cupcakes"
   },
@@ -139,7 +139,7 @@
     "Src": "/products/cupcake-baunilha.png",
     "Alt": "Cupcake de Baunilha",
     "ProductTitle": "Cupcake de Baunilha",
-    "ProductPrice": 8,
+    "ProductPrice": 17,
     "Description": "Este clássico cupcake de baunilha é feito com uma massa macia e fofa, recheado com um creme de baunilha fresco e coberto com chantilly. É perfeito para aqueles que amam o sabor tradicional e é ideal para festas de aniversário, eventos ou simplesmente como uma sobremesa para um dia especial.",
     "Category": "Cupcakes"
   },
@@ -147,7 +147,7 @@
     "Src": "/products/torta-maca.png",
     "Alt": "Torta de Maçã",
     "ProductTitle": "Torta de Maçã",
-    "ProductPrice": 25,
+    "ProductPrice": 45,
     "Description": "Uma deliciosa torta de maçã feita com maçãs frescas e crosta de massa folhada. O recheio é feito com maçãs raspadas, açúcar e especiarias, dando um sabor doce e picante. A crosta é crocante e a massa é macia e deliciosa. Perfeito para o café da manhã ou lanche da tarde.",
     "Category": "Tortas"
   },
@@ -155,7 +155,7 @@
     "Src": "/products/torta-morango.png",
     "Alt": "Torta de Morango",
     "ProductTitle": "Torta de Morango",
-    "ProductPrice": 30,
+    "ProductPrice": 50,
     "Description": "Uma torta deliciosa e fresca feita com morangos frescos e crosta de massa folhada. O recheio é feito com morangos picados, açúcar e gelatina, dando um sabor doce e refrescante. A crosta é crocante e a massa é macia e deliciosa. Perfeito para o café da manhã ou lanche da tarde.",
     "Category": "Tortas"
   },
@@ -163,7 +163,7 @@
     "Src": "/products/torta-limao.png",
     "Alt": "Torta de Limão",
     "ProductTitle": "Torta de Limão",
-    "ProductPrice": 35,
+    "ProductPrice": 45,
     "Description": "Uma torta cítrica e refrescante feita com limões frescos e crosta de massa folhada. O recheio é feito com limão raspado, açúcar e gemas, dando um sabor cítrico e doce. A crosta é crocante e a massa é macia e deliciosa. Perfeito para o café da manhã ou lanche da tarde.",
     "Category": "Tortas"
   },
@@ -187,7 +187,7 @@
     "Src": "/products/geleia-morango.png",
     "Alt": "Geleia de Morango",
     "ProductTitle": "Geleia de Morango",
-    "ProductPrice": 15,
+    "ProductPrice": 10,
     "Description": "A geleia de morango é feita com morangos frescos e açúcar, tem um sabor intenso e adocicado. É perfeita para ser usada em bolos, pães, waffles ou até mesmo para ser comida pura. Com uma textura agradável e um sabor delicioso, ela é uma ótima opção para aqueles que gostam de doces. É uma opção saudável para ser consumida no café da manhã ou lanche da tarde.",
     "Category": "Geleias"
   },
@@ -195,7 +195,7 @@
     "Src": "/products/torta-pessego.png",
     "Alt": "Torta de Pêssego",
     "ProductTitle": "Torta de Pêssego",
-    "ProductPrice": 35,
+    "ProductPrice": 50,
     "Description": "Uma torta de pêssego é uma sobremesa deliciosa e refrescante, perfeita para o verão. Ela é feita com pêssegos frescos e maduros, que lhe dão um sabor doce e suculento. A massa é crocante e macia, com uma textura delicada que se dissolve na boca. O recheio é feito com pêssegos fatiados e um toque de açúcar, o que equilibra perfeitamente o sabor. A cobertura é feita com chantilly e pêssegos frescos, o que não só melhora o sabor, mas também o torna atraente visualmente. Ideal para festas de verão, aniversários e outras ocasiões especiais, esta torta é certa de agradar a todos.",
     "Category": "Tortas"
   },
@@ -203,7 +203,7 @@
     "Src": "/products/torta-charlotte.png",
     "Alt": "Torta Charlotte",
     "ProductTitle": "Torta Charlotte",
-    "ProductPrice": 60,
+    "ProductPrice": 90,
     "Description": "Uma torta charlotte é uma sobremesa tradicional francesa feita com pão de ló, creme de leite, frutas e gelatina. O pão de ló é umedecido com calda de açúcar e recheado com creme de leite e frutas frescas, geralmente morangos ou pêssegos. A torta é então coberta com gelatina, o que lhe dá uma textura macia e suave. O sabor é doce e refrescante, perfeito para o verão. É uma sobremesa elegante e sofisticada, ideal para ocasiões especiais como jantares de gala ou festas de aniversário.",
     "Category": "Tortas"
   },
@@ -267,7 +267,7 @@
     "Src": "/products/cupcake-chocolate.png",
     "Alt": "Cupcake de Chocolate",
     "ProductTitle": "Cupcake de Chocolate",
-    "ProductPrice": 15,
+    "ProductPrice": 17,
     "Description": "Os cupcakes de chocolate são deliciosos bolinhos individuais feitos com massa de chocolate e cobertura de chocolate derretido. Eles são perfeitos para uma sobremesa rápida ou para serem levados como um lanche. Com seu sabor intenso de chocolate, esses cupcakes vão agradar a qualquer amante de chocolate.",
     "Category": "Cupcakes"
   },
@@ -275,7 +275,7 @@
     "Src": "/products/donuts-chocolate.png",
     "Alt": "Donut de Chocolate",
     "ProductTitle": "Donut de Chocolate",
-    "ProductPrice": 8,
+    "ProductPrice": 10,
     "Description": "Os donuts de chocolate são deliciosos anéis de massa frita recheados ou cobertos com chocolate. Eles são perfeitos para um café da manhã ou lanche da tarde. Com seu sabor intenso de chocolate, esses donuts serão um sucesso entre os amantes de chocolate.",
     "Category": "Donuts"
   },
@@ -283,7 +283,7 @@
     "Src": "/products/donuts-doce-leite.png",
     "Alt": "Donut de Doce de Leite",
     "ProductTitle": "Donut de Doce de Leite",
-    "ProductPrice": 8,
+    "ProductPrice": 13,
     "Description": "Os donuts de doce de leite são deliciosos anéis de massa frita recheados ou cobertos com doce de leite. Eles são perfeitos para um café da manhã ou lanche da tarde. Com seu sabor cremoso e adocicado, esses donuts serão um sucesso entre todos os paladares.",
     "Category": "Donuts"
   },

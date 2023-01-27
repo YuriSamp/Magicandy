@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { FormataBRL } from 'utils/ConvertCurrency'
 import Image from 'next/image'
 import FormularioProduto from 'components/FormularioProduto/Formulario'
@@ -7,13 +6,13 @@ import Product from 'models/product'
 import { DataBase } from 'interface/ServerSideDataBase'
 import Head from 'next/head'
 import { GetServerSidePropsContext } from 'next'
-
+import { IProduto } from 'interface/IProduto'
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   try {
     const id = (context.query.id)
     dbConnect.connect()
-    const database = await Product.findById(id);
+    const database = await Product.find({ ProductTitle: `${id}` });
     dbConnect.disconnect()
     return {
       props: { db: JSON.parse(JSON.stringify(database)) }
@@ -26,7 +25,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
 }
 
 const UniqueProduct = (db: DataBase) => {
-  const arr = Object.values(db)
+  const arr: IProduto[] = Object.values(db)[0]
 
   return (
     <>

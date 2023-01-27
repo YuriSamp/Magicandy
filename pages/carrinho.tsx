@@ -29,8 +29,8 @@ function Cart() {
     // setCart((prevState) => [...prevState, CartItem])
   }
 
-  const onDeleteHandler = (index:number, e: React.FormEvent<HTMLFormElement>) => {
-    let newList = Lista.filter( (item, arrIndex) => index !== arrIndex )
+  const onDeleteHandler = (index: number, e: React.FormEvent<HTMLFormElement>) => {
+    let newList = Lista.filter((item, arrIndex) => index !== arrIndex)
     setLista(newList)
   }
 
@@ -65,9 +65,7 @@ function Cart() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <main className='flex flex-col px-2 items-center justify-center py-4 bg-backgroundPink min-h-[calc(100vh-316px)]'>
-
         <div className='flex flex-col w-[80%] px-4 py-6 md:px-6 max-w-[1000px] items-center justify-center text-fontPurple border-fontPurple border-2 bg-white font-kalam rounded-lg'>
-
           <h2 className='text-2xl font-semibold'>Lista de Produtos</h2>
           <div>
             {Lista.map((item, index) => (
@@ -75,7 +73,7 @@ function Cart() {
             ))}
           </div>
           <div className='flex items-center gap=2 md:gap-52 '>
-            <Button value={"Finalizar compra"} href="../" type="LINK"  />
+            <Button value={"Finalizar compra"} href="../" type="LINK" />
             {Subtotal(Lista.length)}
           </div>
         </div>
