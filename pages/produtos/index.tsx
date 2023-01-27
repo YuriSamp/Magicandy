@@ -97,16 +97,20 @@ function Produtos({ db }: DataBase) {
         </div>
         <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 pt-16 pb-8  items-center justify-evenly flex-wrap">
           {
-            dbFiltrado.map(product => (
-              <Card
-                key={product._id}
-                _id={product._id}
-                Src={product.Src}
-                Alt={product.Alt}
-                ProductTitle={product.ProductTitle}
-                ProductPrice={product.ProductPrice}
-              />
-            ))
+            dbFiltrado.map( (product, index) => {
+              let minIndex: number = (Page * 12) - 12
+              let maxIndex: number = (Page * 12) - 1
+              if (index >= minIndex && index <= maxIndex) {
+              return ( <Card
+                  key={product._id}
+                  _id={product._id}
+                  Src={product.Src}
+                  Alt={product.Alt}
+                  ProductTitle={product.ProductTitle}
+                  ProductPrice={product.ProductPrice}
+                />)
+              }
+            })
           }
         </section>
         <div className='flex items-center gap-8 pb-8 '>
