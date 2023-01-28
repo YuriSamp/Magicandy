@@ -30,6 +30,7 @@ function Produtos({ db }: DataBase) {
   }
 
   useEffect(() => {
+    setPage(1)
     if (type === 'Todos' && name === '') {
       setDbFiltrado(db)
     }
@@ -40,13 +41,11 @@ function Produtos({ db }: DataBase) {
     }
 
     if (type === 'Todos' && name !== '') {
-      setPage(1)
       const dbSearch = db.filter(item => Compare(item.ProductTitle, name))
       setDbFiltrado(dbSearch)
     }
 
     if (type !== 'Todos' && name !== '') {
-      setPage(1)
       const dbFiltrado = db.filter(item => item.Category?.toLowerCase() === type.toLowerCase())
       const dbSearch = dbFiltrado.filter(item => Compare(item.ProductTitle, name))
       setDbFiltrado(dbSearch)
@@ -84,7 +83,6 @@ function Produtos({ db }: DataBase) {
       />)
     }
   }
-
 
   return (
     <>

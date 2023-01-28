@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import FormImage from 'public/form.png'
 import Swal from 'sweetalert2'
+import MaskedInput from 'react-text-mask'
 
 
 // type Inputs = {
@@ -58,6 +59,16 @@ function Contato() {
               Name="telephone"
               Label="Telefone *"
               Type="tel"
+            />
+
+            <MaskedInput
+              mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
+              className='py-2 px-4 rounded-lg  ring-backgroundPink ring-2 bg-slate-200'
+              placeholder="Enter a phone number"
+              guide={false}
+              id="my-input-id"
+              onBlur={() => { }}
+              onChange={() => { }}
             />
 
             <div className='flex flex-col gap-2'>

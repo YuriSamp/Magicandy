@@ -7,6 +7,8 @@ import { DataBase } from 'interface/ServerSideDataBase'
 import Head from 'next/head'
 import { GetServerSidePropsContext } from 'next'
 import { IProduto } from 'interface/IProduto'
+import { AiOutlineArrowLeft } from 'react-icons/ai'
+import Link from 'next/link'
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   try {
@@ -35,7 +37,16 @@ const UniqueProduct = (db: DataBase) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <main className='bg-backgroundPink flex justify-center items-center p-12 py-16'>
+      <main className='bg-backgroundPink flex flex-col justify-center items-center p-12 py-16'>
+        <div className=''>
+          <Link
+            href='./'
+            className='flex items-center justify-center self-start gap-2 min-w-[110px] cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite font-kalam rounded-lg select-none'
+          >
+            <AiOutlineArrowLeft />
+            Voltar
+          </Link>
+        </div>
         {arr.map(item => (
           <div className='bg-white text-black rounded-lg drop-shadow-xl border-2 border-fontPurple p-2 max-w-[1000px]' key={item._id}>
             <div className='flex flex-col md:flex-row justify-between'>
