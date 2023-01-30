@@ -70,7 +70,7 @@ function FormularioProduto(props: Props) {
       </div>
       <div className='flex gap-4 justify-center items-center'>
         <AiOutlineMinusCircle
-          className='text-3xl fill-fontPurple'
+          className='text-3xl fill-fontPurple cursor-pointer'
           onClick={minusQuantity}
         />
         <input
@@ -82,7 +82,7 @@ function FormularioProduto(props: Props) {
           max={maxQuantity}
         />
         <AiOutlinePlusCircle
-          className='text-3xl fill-fontPurple'
+          className='text-3xl fill-fontPurple cursor-pointer'
           onClick={plusQuantity}
         />
 

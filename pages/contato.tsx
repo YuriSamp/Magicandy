@@ -63,7 +63,7 @@ function Contato() {
 
             <MaskedInput
               mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
-              className='py-2 px-4 rounded-lg  ring-backgroundPink ring-2 bg-slate-200'
+              className='py-2 px-4 rounded-lg  ring-backgroundPink ring-2 bg-slate-200 maskedinput'
               placeholder="Enter a phone number"
               guide={false}
               id="my-input-id"

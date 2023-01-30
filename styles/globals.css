@@ -50,11 +50,11 @@ input[type='range']::-webkit-slider-thumb {
   border-radius: 50%;
 }
 
-nav a {
+.navlink {
   position: relative;
 }
 
-nav a::after {
+.navlink::after {
   position: absolute;
   content: '';
   display: block;
@@ -62,7 +62,7 @@ nav a::after {
   bottom: 0;
   left: 0;
 
-  background: linear-gradient(to left, transparent, rgba(140, 82, 255));
+  background: linear-gradient(to left, rgb(179, 155, 227), rgb(140, 82, 255));
 
   width: 100%;
   height: 2px;
@@ -72,7 +72,30 @@ nav a::after {
   transform-origin: left;
 }
 
-nav a:hover::after {
+.navlink:hover::after {
   transform: scaleX(1);
   transform-origin: right;
+}
+
+.button-default,
+.button-secondary,
+input:active,
+input:focus {border: solid 1px transparent;}
+
+.button-default:hover,
+input:active,
+input:focus {
+  border: solid 1px #ff8fb1;
+  box-shadow:
+    0px 0px 5px 2px #ff8fb1,
+    inset 0 0 1px 1px #ff8fb1,
+    0px 0px 10px 5px #ff8fb144;
+}
+
+.button-secondary:hover {
+  border: solid 1px #8c52ff;
+  box-shadow:
+    0px 0px 5px 2px #8c52ff,
+    inset 0 0 1px 1px #8c52ff,
+    0px 0px 10px 5px #8c52ff44;
 }

@@ -113,7 +113,7 @@ function Produtos({ db }: DataBase) {
         {QuantityofPages > 1 &&
           <section className='flex items-center gap-8 pb-8 '>
             <button
-              className=' flex items-center justify-center gap-2 min-w-[110px] cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite font-kalam rounded-lg select-none'
+              className=' flex items-center justify-center gap-2 min-w-[110px] cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite font-kalam rounded-lg select-none button-secondary'
               onClick={() => handleQuantity(Page, "SUBTRACTION")}
             >
               <AiOutlineArrowLeft />
@@ -121,7 +121,7 @@ function Produtos({ db }: DataBase) {
             </button>
             <p className='font-kalam text-xl'>Página {Page} / {QuantityofPages}</p>
             <button
-              className='flex items-center justify-center gap-2 min-w-[110px] cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite  font-kalam rounded-lg select-none'
+              className='flex items-center justify-center gap-2 min-w-[110px] cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite  font-kalam rounded-lg select-none hover:ring-offset-fontPurple hover:ring-offset-1'
               onClick={() => handleQuantity(Page, "SUM")}
             >
               Avançar
