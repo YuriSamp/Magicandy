@@ -5,6 +5,12 @@ import Button from '@ui/Button';
 import { useRecoilState } from 'recoil'
 import { CartAtom, CartItem } from 'context/Atom'
 import Swal from 'sweetalert2'
+
+//TODO refatorar o componente
+//trocar value por quantity
+//refatorar com um hook
+//deixar mais semantico
+
 interface Props {
   Price: number,
   _id: string,
@@ -42,8 +48,6 @@ function FormularioProduto(props: Props) {
       Price: props.Price,
       Image: props.Imagem
     }
-
-    //* Alterar o botão para ser um link de voltar para produtos
     Swal.fire({
       icon: 'success',
       text: 'O seu pedido foi adicionado ao carrinho',
@@ -51,6 +55,9 @@ function FormularioProduto(props: Props) {
 
     setCart((prevState) => [...prevState, CartItem])
   }
+
+  //refatorar dessa forma
+  const test = (event: React.ChangeEvent<HTMLInputElement>) => setValue(Number(event.target.value))
 
 
   return (
@@ -77,7 +84,7 @@ function FormularioProduto(props: Props) {
           className='class="w-full h-2 rounded-lg appearance-none cursor-pointer bg-backgroundPink'
           type='range'
           value={value}
-          onChange={(e) => setValue(Number(e.target.value))}
+          onChange={test}
           min={minQuantity}
           max={maxQuantity}
         />
@@ -85,7 +92,6 @@ function FormularioProduto(props: Props) {
           className='text-3xl fill-fontPurple'
           onClick={plusQuantity}
         />
-
       </div>
       <h2 className='text-xl text-start font-semibold select-none' >
         Total: {FormataBRL((value * props.Price))}

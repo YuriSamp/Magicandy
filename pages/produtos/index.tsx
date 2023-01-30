@@ -8,6 +8,10 @@ import Head from 'next/head'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { IProduto } from 'interface/IProduto';
 
+//TODO : deixar mais semantico
+// trocar db filtrado por produto
+// mexer na função que controlado o estado da pagina, separa ela e tornar ela mais semantica
+
 export async function getStaticProps() {
   dbConnect.connect()
   const database = await Product.find();

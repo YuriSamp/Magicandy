@@ -6,6 +6,7 @@ import { CartAtom } from 'context/Atom'
 import { FormataBRL } from 'utils/ConvertCurrency'
 import Head from 'next/head'
 
+//QUebrar em componentes menores e compor
 
 function Cart() {
 
@@ -46,15 +47,6 @@ function Cart() {
       return <h3 className='text-lg'>Nenhum item no carrinho</h3>
     }
   }
-
-
-  function HandleRemove(id: string, e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    e.preventDefault()
-    const ListaVerificada = Lista.filter(item => item._id !== id)
-    setLista(ListaVerificada)
-    console.log('eu fui clicado')
-  }
-
 
   return (
     <>

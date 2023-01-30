@@ -4,6 +4,8 @@ import dbConnect from 'services/connect'
 import Product from 'models/product'
 import { DataBase } from 'interface/ServerSideDataBase'
 
+//Mudar os nomes do db
+//Ele ja ta retornando um array
 
 export async function getStaticProps() {
   dbConnect.connect()
