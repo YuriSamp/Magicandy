@@ -99,3 +99,39 @@ input:focus {
     inset 0 0 1px 1px #8c52ff,
     0px 0px 10px 5px #8c52ff44;
 }
+
+.wavy {
+/* mask generated with: 
+https://css-generators.com/wavy-shapes/ */
+--mask:
+	radial-gradient(111.80px at 150.00px 50%,#000 99%,#0000 101%) 0 calc(50% - 100px)/51% 200px repeat-y,
+	radial-gradient(111.80px at -100px 50%,#0000 99%,#000 101%) 50px 50%/calc(51% - 50px) 200px repeat-y,
+		radial-gradient(111.80px at calc(100% - 150.00px) 50%,#000 99%,#0000 101%) 100% calc(50% - 100px)/51% 200px repeat-y,
+	radial-gradient(111.80px at calc(100% + 100.00px) 50%,#0000 99%,#000 101%) calc(100% - 50px) 50%/calc(51% - 50px) 200px repeat-y;
+-webkit-mask: var(--mask);
+		mask: var(--mask);
+  
+}
+
+.grid-cards div:nth-child(odd) span:nth-child(2){
+	padding-right: 6rem;
+}
+.grid-cards div:nth-child(even) span:nth-child(2){
+	padding-left: 6rem;
+}
+
+.grid-cards div:nth-child(odd) {
+	background-image:
+		linear-gradient(to right,
+			#03070f 50%,
+			#050204 60%,
+			#1d0112 100%);
+}
+.grid-cards div:nth-child(even) {
+	flex-direction: row-reverse;
+	background-image:
+		linear-gradient(to left,
+			#03070f 50%,
+			#050204 60%,
+			#1d0112 100%);
+}
