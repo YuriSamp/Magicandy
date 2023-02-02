@@ -34,7 +34,7 @@ export default function Home({ db }: DataBase) {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.svg" />
 			</Head>
-			<main className='flex flex-col items-center gap-8 min-h-screen w-full min-w-[320px]  bg-backgroundPink overflow-x-hidden pb-10'>
+			<main className='flex flex-col items-center gap-8 min-h-screen w-full min-w-[320px]  bg-backgroundWhite overflow-x-hidden pb-10'>
 
 				<section className="h-[calc(100vh_-_146px)] w-screen overflow-hidden relative flex items-center justify-center">
 					<div className="opacity-90 w-full h-full">
@@ -65,7 +65,7 @@ export default function Home({ db }: DataBase) {
 					</div>
 				</section>
 
-				<section className='wavy max-w-[1200px]'>
+				<section className='max-w-[1200px]'>
 					<div className=' items-center grid-cards min-w-[900px]'>
 						<CategoryCard
 							productTitle="Tortas"
