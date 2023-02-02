@@ -99,3 +99,46 @@ input:focus {
     inset 0 0 1px 1px #8c52ff,
     0px 0px 10px 5px #8c52ff44;
 }
+
+
+
+
+
+
+.grid-cards div:nth-child(odd) span:nth-child(2){
+	padding-right: auto;
+}
+.grid-cards div:nth-child(even) span:nth-child(2){
+	padding-left: auto;
+}
+
+.grid-cards div:nth-child(odd) {
+	--cards-pares: "";
+}
+.grid-cards div:nth-child(even) {
+	flex-direction: row-reverse;
+}
+.grid-cards div {
+	background: linear-gradient(45deg, #03070f 20%, #050204 40%, #1d0112 100%);
+	background-size: 600% 600%;
+
+	-webkit-animation: AnimationName 5s ease infinite;
+	-moz-animation: AnimationName 5s ease infinite;
+	animation: BgMove 5s ease infinite;
+}
+
+@-webkit-keyframes BgMove {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes BgMove {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes BgMove {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

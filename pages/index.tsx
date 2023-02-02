@@ -6,6 +6,7 @@ import { DataBase } from 'interface/ServerSideDataBase'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import unicornImg from 'public/unicorn2.png'
+import CategoryCard from '@ui/CategoryCard'
 
 
 export async function getStaticProps() {
@@ -70,6 +71,7 @@ export default function Home({ db }: DataBase) {
             <p className='text-2xl text-justify teste'>Criada em 2023, a partir de um sonho e um compromisso, de fazer nossos produtos com amor e qualidade, para que em cada fatia, cada mordida e cada suspiro, possamos compartilhar com vocês a magia da felicidade. </p>
           </div>
         </div>
+
 
         <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 py-16 border-b-2 border-[#8c52ff] items-center justify-evenly flex-wrap">
           {
