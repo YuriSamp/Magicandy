@@ -22,7 +22,6 @@ const Card = (props: IProduto) => {
                 </span>
                 <Button type='LINK' value='Ver detalhes' href={props.ProductTitle} />
             </div>
-
         </div>
     )
 }

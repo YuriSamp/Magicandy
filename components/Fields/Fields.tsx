@@ -8,7 +8,6 @@ interface Props {
 
 function Fields({ Name, Label, Type }: Props) {
 
-
     return (
         <div className='flex flex-col gap-2'>
             <label htmlFor={Name}>{Label}</label>
