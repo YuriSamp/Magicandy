@@ -30,8 +30,7 @@ function CartItem(props: Props) {
         </div>
         <div className='px-4 flex items-center md:self-start'>
           <button
-            className='cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-backgroundPink font-kalam rounded-lg select-none'
-            type="button"
+            className='cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-backgroundPink font-kalam rounded-lg select-none button-default'
             onClick={(e) => props.OnDeleteHandler(props.Index, e)}
           >
             Deletar
