@@ -7,9 +7,9 @@ import { DataBase } from 'interface/ServerSideDataBase'
 import Head from 'next/head'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { IProduto } from 'interface/IProduto';
+import { FilterHelper } from 'helpers/FilterHelper';
 
 //TODO : deixar mais semantico
-// trocar db filtrado por produto
 // mexer na função que controlado o estado da pagina, separa ela e tornar ela mais semantica
 
 export async function getStaticProps() {
@@ -21,46 +21,23 @@ export async function getStaticProps() {
   }
 }
 
-function Produtos({ db }: DataBase) {
+function Products({ db }: DataBase) {
   const [name, setName] = useState('')
   const [type, setType] = useState('Todos')
-  const [dbFiltrado, setDbFiltrado] = useState(db)
+  const [Products, setProducts] = useState(db)
   const [Page, setPage] = useState(1)
-
-  function Compare(string1: string, string2: string) {
-    const titleNormalized = string1.toLocaleLowerCase()
-    const searchValueNormalized = string2.toLowerCase()
-    return titleNormalized.includes(searchValueNormalized)
-  }
 
   useEffect(() => {
     setPage(1)
-    if (type === 'Todos' && name === '') {
-      setDbFiltrado(db)
-    }
-
-    if (type !== 'Todos' && name === '') {
-      const dbFiltrado = db.filter(item => item.Category?.toLowerCase() === type.toLowerCase())
-      setDbFiltrado(dbFiltrado)
-    }
-
-    if (type === 'Todos' && name !== '') {
-      const dbSearch = db.filter(item => Compare(item.ProductTitle, name))
-      setDbFiltrado(dbSearch)
-    }
-
-    if (type !== 'Todos' && name !== '') {
-      const dbFiltrado = db.filter(item => item.Category?.toLowerCase() === type.toLowerCase())
-      const dbSearch = dbFiltrado.filter(item => Compare(item.ProductTitle, name))
-      setDbFiltrado(dbSearch)
-    }
+    const ProdutosFiltrados = FilterHelper(name, type, db)
+    setProducts(ProdutosFiltrados)
   }, [type, name])
 
   const onChangeHandler = (event: any) => {
     setName(event.target.value)
   }
 
-  const QuantityofPages = Math.ceil(dbFiltrado.length / 12)
+  const QuantityofPages = Math.ceil(Products.length / 12)
 
   function handleQuantity(number: number, operation: string) {
     const rangeOfSum = number >= 1 && number < QuantityofPages
@@ -97,7 +74,7 @@ function Produtos({ db }: DataBase) {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <main className='flex flex-col items-center min-h-screen w-full min-w-[320px]  bg-backgroundPink border-b-2 border-fontPurple'>
-        <h1 className='text-4xl text-white font-kalam mt-6'>Produtos</h1>
+        <h1 className='text-4xl text-white font-kalam mt-6'>Products</h1>
         <div className='flex justify-center w-full flex-wrap gap-6 py-6'>
           <Search onChangeHandler={onChangeHandler} />
           <select id='filterSelect' className='py-2 px-4 w-[229px] text-center rounded-lg ring-fontPurple ring-2 bg-white'
@@ -112,7 +89,7 @@ function Produtos({ db }: DataBase) {
           </select>
         </div>
         <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 pt-16 pb-8  items-center justify-evenly flex-wrap">
-          {dbFiltrado.map((product, index) => CardRender(product, index))}
+          {Products.map((product, index) => CardRender(product, index))}
         </section>
         {QuantityofPages > 1 &&
           <section className='flex items-center gap-8 pb-8 '>
@@ -138,4 +115,4 @@ function Produtos({ db }: DataBase) {
   )
 }
 
-export default Produtos
+export default Products
