@@ -3,7 +3,7 @@ import React from 'react'
 
 function CategoryCard(props: any) {
   return (
-    <div className='flex items-stretch justify-center border-t-2 border-b-2 border-backgroundPink'>
+    <div data-aos="flip-up" className='flex items-stretch justify-center border-t-2 border-b-2 border-backgroundPink'>
         <Image
             className='w-1/2'
             src={props.Src}

@@ -119,12 +119,14 @@ input:focus {
 	flex-direction: row-reverse;
 }
 .grid-cards div {
-	background: linear-gradient(45deg, #03070f 20%, #050204 40%, #1d0112 100%);
+	/* background: linear-gradient(circle at 100%, #03070f 20%, #050204 40%, #690d66 100%); */
+  background: radial-gradient(ellipse at top, #4b0909 50%, transparent),
+            radial-gradient(ellipse at bottom, #2d036b 50%, transparent);
 	background-size: 600% 600%;
 
 	-webkit-animation: AnimationName 5s ease infinite;
 	-moz-animation: AnimationName 5s ease infinite;
-	animation: BgMove 5s ease infinite;
+	animation: BgMove 15s ease infinite;
 }
 
 @-webkit-keyframes BgMove {
@@ -141,4 +143,14 @@ input:focus {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+.wavy {
+  --mask:
+    radial-gradient(59.17px at 50% 81.00px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 51% repeat-x,
+    radial-gradient(59.17px at 50% -51px,#0000 99%,#000 101%) 50% 30px/120px calc(51% - 30px) repeat-x,
+    radial-gradient(59.17px at 50% calc(100% - 81.00px),#000 99%,#0000 101%) calc(50% - 60px) 100%/120px 51% repeat-x,
+    radial-gradient(59.17px at 50% calc(100% + 51.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px calc(51% - 30px) repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
 }
