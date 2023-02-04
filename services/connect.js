@@ -1,10 +1,11 @@
-import mongoose, { mongo } from 'mongoose';
+import mongoose from 'mongoose';
 
 //? acho que a tipagem seria isConnected = boolean
 
 // const connection = {};
 
 async function connect() {
+  mongoose.set('strictQuery', false);
   // if (connection.isConnected) {
   //   return;
   // }
@@ -22,7 +23,6 @@ async function connect() {
   //   }
   //   mongoose.disconnect;
   // }
-  // mongoose.set('strictQuery', false);
   // const db = mongoose.connect(process.env.MONGODB_URI);
   // connection.isConnected = db.connections[0].readyState;
 }

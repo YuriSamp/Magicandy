@@ -1,13 +1,11 @@
 import Link from 'next/link';
 
+//trabalhar com children
 interface Props {
     value: string;
     type?: string;
-    href?: string | number;
+    href?: string;
 }
-
-
-
 
 const Button = (props: Props) => {
     if (props.type === 'LINK') {
