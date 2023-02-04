@@ -101,10 +101,6 @@ input:focus {
 }
 
 
-
-
-
-
 .grid-cards div:nth-child(odd) span:nth-child(2){
 	padding-right: auto;
 }
@@ -118,15 +114,15 @@ input:focus {
 .grid-cards div:nth-child(even) {
 	flex-direction: row-reverse;
 }
-.grid-cards div {
-	/* background: linear-gradient(circle at 100%, #03070f 20%, #050204 40%, #690d66 100%); */
-  background: radial-gradient(ellipse at top, #4b0909 50%, transparent),
-            radial-gradient(ellipse at bottom, #2d036b 50%, transparent);
+
+.bgMovingEffect {
+  background: linear-gradient(to top left, #FF8FB199 50%,
+    #FF8FB1 100% );
 	background-size: 600% 600%;
 
 	-webkit-animation: AnimationName 5s ease infinite;
 	-moz-animation: AnimationName 5s ease infinite;
-	animation: BgMove 15s ease infinite;
+	animation: BgMove 5s ease infinite;
 }
 
 @-webkit-keyframes BgMove {

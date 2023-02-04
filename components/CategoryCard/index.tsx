@@ -3,7 +3,12 @@ import React from 'react'
 
 function CategoryCard(props: any) {
   return (
-    <div data-aos="flip-up" className='flex items-stretch justify-center border-t-2 border-b-2 border-backgroundPink'>
+    <div 
+        data-aos="flip-up"
+        data-aos-once="true"
+        data-aos-offset="-70"
+        className='flex items-stretch justify-center bg-backgroundWhite text-fontPurple '
+    >
         <Image
             className='w-1/2'
             src={props.Src}
@@ -11,7 +16,7 @@ function CategoryCard(props: any) {
             width={200}
             height={200}
         />
-        <span className='flex flex-col justify-center p-6 gap-8 w-1/2 text-backgroundWhite description'>
+        <span className='flex flex-col justify-center p-6 gap-8 w-1/2 description'>
             <h2 className='text-center text-3xl font-kalam'>    
                 {props.productTitle}
             </h2>
