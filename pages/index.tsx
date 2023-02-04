@@ -11,23 +11,10 @@ import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import CardTestimony from "@ui/CardTestimony/CardTestimony";
+import cards from '../data/HomeCard.json'
+import testimony from '../data/testimony.json'
 
-//Mudar os nomes do db
-//Ele ja ta retornando um array
-
-export async function getStaticProps() {
-
-  dbConnect.connect();
-  const database = await Product.find();
-  dbConnect.disconnect();
-  const DataBaseSerialize = JSON.parse(JSON.stringify(database));
-  const db = DataBaseSerialize.sort(() => 0.5 - Math.random()).splice(0, 3);
-  return {
-    props: { db },
-  };
-}
-
-export default function Home({ db }: DataBase) {
+export default function Home() {
   const [domLoaded, setDomLoaded] = useState(false);
 
   useEffect(() => {
@@ -82,79 +69,31 @@ export default function Home({ db }: DataBase) {
               className="rounded-3xl overflow-hidden items-center grid-cards min-w-[900px]"
               title="Ver produtos"
             >
-              <CategoryCard
-                productTitle="Tortas"
-                Src="/products/red-velvet-cake.png"
-                Alt="Um bolo"
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                ducimus quae minima recusandae libero iusto unde soluta
-                repudiandae maiores quia, fuga asperiores quidem ullam,
-                explicabo, eum esse quod impedit. Commodi.
-              </CategoryCard>
-              <CategoryCard
-                productTitle="Brownies"
-                Src="/products/brownie-morango.png"
-                Alt="Um bolo"
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                ducimus quae minima recusandae libero iusto unde soluta
-                repudiandae maiores quia, fuga asperiores quidem ullam,
-                explicabo, eum esse quod impedit. Commodi.
-              </CategoryCard>
-              <CategoryCard
-                productTitle="Donuts"
-                Src="/products/donuts-geleia.png"
-                Alt=""
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                ducimus quae minima recusandae libero iusto unde soluta
-                repudiandae maiores quia, fuga asperiores quidem ullam,
-                explicabo, eum esse quod impedit. Commodi.
-              </CategoryCard>
-              <CategoryCard
-                productTitle="Mousses"
-                Src="/products/mousse-limao.png"
-                Alt=""
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                ducimus quae minima recusandae libero iusto unde soluta
-                repudiandae maiores quia, fuga asperiores quidem ullam,
-                explicabo, eum esse quod impedit. Commodi.
-              </CategoryCard>
-              <CategoryCard
-                productTitle="Pavês"
-                Src="/products/pave-chocolate.png"
-                Alt=""
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                ducimus quae minima recusandae libero iusto unde soluta
-                repudiandae maiores quia, fuga asperiores quidem ullam,
-                explicabo, eum esse quod impedit. Commodi.
-              </CategoryCard>
+              {cards.map((item, index) =>
+                <CategoryCard
+                  productTitle={item.productTitle}
+                  Src={item.Src}
+                  Alt=""
+                  key={index}
+                >
+                  {item.Text}
+                </CategoryCard>
+              )}
             </div>
           </Link>
         </section>
 
         <section className="flex gap-4  border-2 border-t-fontPurple border-b-fontPurple border-r-transparent border-l-transparent flex-col bg-backgroundWhite py-[90px] p-6 font-kalam text-fontPurple w-full wavy">
           <h2 className="text-center text-4xl">Depoimentos</h2>
-
           <div className="flex flex-col gap-12 lg:gap-0 lg:flex-row justify-evenly">
-            <CardTestimony
-              Name="Joaozinho"
-              Description="FPOASKFPOSAKP POFKSAPO fsaPO JFPSAJ FPOSAJ pfoSAJ POFSAJP fjsap OJFPOSAJFpSAOJ fpSAOJ FPSAOJF pASOJ FPASOJ fpSAOJFPAOSJFP SAOJFPSAOJ PFSAOJFP SAOJF"
-              Img="https://http.cat/404"
-            />
-            <CardTestimony
-              Name="Joaozinho"
-              Description="FPOASKFPOSAKPF"
-              Img="https://http.cat/404"
-            />
-            <CardTestimony
-              Name="Joaozinho"
-              Description="FPOASKFPOSAKPF"
-              Img="https://http.cat/404"
-            />
+            {testimony.map((item, index) =>
+              <CardTestimony
+                Name={item.Name}
+                Description={item.Description}
+                Img={item.Img}
+                key={index}
+              />
+            )}
           </div>
         </section>
       </main>

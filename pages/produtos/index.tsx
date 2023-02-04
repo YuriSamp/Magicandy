@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from 'react'
-import Card from '@ui/Card'
 import Search from '@ui/Search'
 import Product from 'models/product';
 import dbConnect from 'services/connect';
 import { DataBase } from 'interface/ServerSideDataBase'
 import Head from 'next/head'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
-import { IProduto } from 'interface/IProduto';
-import { FilterHelper } from 'helpers/FilterHelper';
+import { FilterHelper } from 'helpers/ProdutcHelpers/FilterHelper';
 import Image from 'next/image';
+import { handleQuantityMinus, handleQuantityPlus } from 'helpers/ProdutcHelpers/HandleQuantity';
+import { CardRender } from 'helpers/ProdutcHelpers/ItemRender';
 
-//TODO : deixar mais semantico
-// mexer na função que controlado o estado da pagina, separa ela e tornar ela mais semantica
+const opcoes = ['Todos',
+  'Bolos',
+  'Donuts',
+  'Brownies',
+  'Mousses',
+  'Tapiocas',
+  'Cupcakes']
 
 export async function getStaticProps() {
   dbConnect.connect()
@@ -28,6 +33,8 @@ function Products({ db }: DataBase) {
   const [Products, setProducts] = useState(db)
   const [Page, setPage] = useState(1)
 
+  const QuantityofPages = Math.ceil(Products.length / 12)
+
   useEffect(() => {
     setPage(1)
     const ProdutosFiltrados = FilterHelper(name, type, db)
@@ -36,34 +43,6 @@ function Products({ db }: DataBase) {
 
   const onChangeHandler = (event: any) => {
     setName(event.target.value)
-  }
-
-  const QuantityofPages = Math.ceil(Products.length / 12)
-
-  function handleQuantity(number: number, operation: string) {
-    const rangeOfSum = number >= 1 && number < QuantityofPages
-    const rangeOfSubtraction = number > 1 && number <= QuantityofPages
-    if (operation === 'SUM' && rangeOfSum) {
-      setPage(number + 1)
-    }
-
-    if (operation === 'SUBTRACTION' && rangeOfSubtraction)
-      setPage(number - 1)
-  }
-
-  function CardRender(product: IProduto, index: number) {
-    let minIndex: number = (Page * 12) - 12
-    let maxIndex: number = (Page * 12) - 1
-    if (index >= minIndex && index <= maxIndex) {
-      return (<Card
-        key={product._id}
-        _id={product._id}
-        Src={product.Src}
-        Alt={product.Alt}
-        ProductTitle={product.ProductTitle}
-        ProductPrice={product.ProductPrice}
-      />)
-    }
   }
 
   return (
@@ -80,37 +59,30 @@ function Products({ db }: DataBase) {
           <Search onChangeHandler={onChangeHandler} />
           <select id='filterSelect' className='py-2 px-4 w-[229px] text-center rounded-lg ring-fontPurple ring-2 bg-white'
             onChange={e => setType(e.target.value)}>
-            <option>Todos</option>
-            <option>Bolos</option>
-            <option>Donuts</option>
-            <option>Brownies</option>
-            <option>Mousses</option>
-            <option>Tapiocas</option>
-            <option>Cupcakes</option>
+            {opcoes.map(item => <option key={item}>{item}</option>)}
           </select>
         </div>
-        
+
         <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 pt-16 pb-8  items-center justify-evenly lg:items-start flex-wrap">
-          { 
+          {
             Products.length > 0 ?
-            Products.map((product, index) => CardRender(product, index)) :
-            <div className='text-center text-2xl font-bold'>
-              <span>Produto não encontrado</span>
-              <Image 
-                alt=""
-                src="https://http.cat/404"
-                width={400}
-                height={400}
-              />
-            </div>
+              Products.map((product, index) => CardRender(product, index, Page)) :
+              <div className='text-center text-2xl font-bold'>
+                <span>Produto não encontrado</span>
+                <Image
+                  alt=""
+                  src="https://http.cat/404"
+                  width={400}
+                  height={400}
+                />
+              </div>
           }
         </section>
-
         {QuantityofPages > 1 &&
           <section className='flex items-center gap-8 pb-8 '>
             <button
               className=' flex items-center justify-center gap-2 min-w-[110px] cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite font-kalam rounded-lg select-none button-secondary'
-              onClick={() => handleQuantity(Page, "SUBTRACTION")}
+              onClick={() => setPage(handleQuantityMinus(Page, QuantityofPages))}
             >
               <AiOutlineArrowLeft />
               Voltar
@@ -118,7 +90,7 @@ function Products({ db }: DataBase) {
             <p className='font-kalam text-xl'>Página {Page} / {QuantityofPages}</p>
             <button
               className='flex items-center justify-center gap-2 min-w-[110px] cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite  font-kalam rounded-lg select-none button-secondary'
-              onClick={() => handleQuantity(Page, "SUM")}
+              onClick={() => setPage(handleQuantityPlus(Page, QuantityofPages))}
             >
               Avançar
               <AiOutlineArrowRight />

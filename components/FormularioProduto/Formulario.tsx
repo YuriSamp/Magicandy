@@ -7,10 +7,6 @@ import { CartAtom, CartItem } from 'context/Atom'
 import Swal from 'sweetalert2'
 import { maxQuantity, minQuantity, minusQuantity, plusQuantity, quantityOnChangeHandler } from './FormHelper';
 
-//TODO refatorar o componente
-//refatorar com um hook
-//deixar mais semantico
-
 interface Props {
   Price: number,
   _id: string,

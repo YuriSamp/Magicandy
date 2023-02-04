@@ -4,6 +4,13 @@ import React from 'react'
 import MaskedInput from 'react-text-mask';
 import Swal from 'sweetalert2';
 
+const opcoes = [
+  'Duvida',
+  'Sugestão',
+  'Reclamação',
+  'Outros'
+]
+
 function FormBody() {
 
   const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
@@ -51,10 +58,7 @@ function FormBody() {
       <div className='flex flex-col gap-2'>
         <label htmlFor='contactReason'>Motivo do contato *</label>
         <select id='contactReason' className='py-2 px-4 rounded-lg ring-backgroundPink ring-2 bg-slate-200 '>
-          <option>Duvida</option>
-          <option>Sugestão</option>
-          <option>Reclamação</option>
-          <option>Outros</option>
+          {opcoes.map(item => <option key={item}>{item}</option>)}
         </select>
         <span></span>
       </div>

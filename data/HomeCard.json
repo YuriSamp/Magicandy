@@ -1,0 +1,27 @@
+[
+  {
+    "productTitle": "Tortas",
+    "Src": "/products/red-velvet-cake.png",
+    "Text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum"
+  },
+  {
+    "productTitle": "Brownies",
+    "Src": "/products/brownie-morango.png",
+    "Text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum"
+  },
+  {
+    "productTitle": "Donuts",
+    "Src": "/products/donuts-geleia.png",
+    "Text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum"
+  },
+  {
+    "productTitle": "Mousses",
+    "Src": "/products/mousse-limao.png",
+    "Text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum"
+  },
+  {
+    "productTitle": "Pavês",
+    "Src": "/products/pave-chocolate.png",
+    "Text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum"
+  }
+]

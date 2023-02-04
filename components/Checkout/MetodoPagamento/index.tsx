@@ -6,7 +6,7 @@ import { FaBarcode } from 'react-icons/fa'
 export const FormularioCartao = () => {
   return (
     <section className='flex flex-col min-w-[810px]'>
-      <div className='border-b-2 py-4 border-gray-300'>
+      <div className='border-b-2 py-8 border-gray-300'>
         <p className='pb-4'>Cartões de credito:</p>
         <div className='flex gap-4 items-center'>
           <input
