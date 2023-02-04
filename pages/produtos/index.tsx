@@ -102,7 +102,7 @@ function Products({ db }: DataBase) {
             </button>
             <p className='font-kalam text-xl'>Página {Page} / {QuantityofPages}</p>
             <button
-              className='flex items-center justify-center gap-2 min-w-[110px] cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite  font-kalam rounded-lg select-none hover:ring-offset-fontPurple hover:ring-offset-1'
+              className='flex items-center justify-center gap-2 min-w-[110px] cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite  font-kalam rounded-lg select-none button-secondary'
               onClick={() => handleQuantity(Page, "SUM")}
             >
               Avançar

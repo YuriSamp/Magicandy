@@ -33,8 +33,8 @@
     "pages/api/seeds.ts",
     "services/connect.ts",
     "services/connect.ts",
-    "components/Navbar/navbar.stories.mdx",
-    "components/Navbar/navbar.stories.mdx"
+    "components/layout/Navbar/navbar.stories.mdx",
+    "components/layout/Navbar/navbar.stories.mdx"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,4 +1,5 @@
-import { FormularioCheckout } from '@ui/FormularioCheckout'
+import { FormularioCartao } from '@ui/Checkout/FormularioCartao'
+import { FormularioCheckout } from '@ui/Checkout/FormularioCheckout'
 import Head from 'next/head'
 import React from 'react'
 
@@ -18,7 +19,7 @@ function checkout() {
             <div className='pt-4 text-center'>
               <h1 className='text-2xl font-kalam text-fontPurple font-semibold'>Preencha as informações abaixo</h1>
             </div>
-            <FormularioCheckout />
+            <FormularioCartao />
           </form>
         </div>
       </main>
