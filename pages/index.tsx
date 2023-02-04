@@ -32,9 +32,6 @@ export default function Home({ db }: DataBase) {
 
   useEffect(() => {
     setDomLoaded(true);
-  }, []);
-
-  useLayoutEffect(() => {
     AOS.init();
   }, []);
 

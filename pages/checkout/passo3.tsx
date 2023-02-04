@@ -1,9 +1,10 @@
-import { FormularioCheckout } from '@ui/FormularioCheckout'
+import { RevisarPedido } from '@ui/Checkout/RevisarPedido'
 import Head from 'next/head'
 import React from 'react'
 
+function Passo3() {
 
-function checkout() {
+
   return (
     <>
       <Head>
@@ -13,12 +14,11 @@ function checkout() {
         <div className='flex rounded-lg border-2 border-fontPurple overflow-hidden'>
           <form
             className='flex flex-col gap-4 w-full  bg-backgroundWhite p-10 rounded-r-lg'
-          // onSubmit={onSubmitHandler}
           >
             <div className='pt-4 text-center'>
-              <h1 className='text-2xl font-kalam text-fontPurple font-semibold'>Preencha as informações abaixo</h1>
+              <h1 className='text-2xl font-kalam text-fontPurple font-semibold'>Revisar Pedido</h1>
             </div>
-            <FormularioCheckout />
+            <RevisarPedido />
           </form>
         </div>
       </main>
@@ -26,4 +26,4 @@ function checkout() {
   )
 }
 
-export default checkout
+export default Passo3

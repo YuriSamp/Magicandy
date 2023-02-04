@@ -35,14 +35,18 @@ function FormBody() {
         Type="email"
       />
 
-      <MaskedInput
-        mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
-        className='py-2 px-4 rounded-lg  ring-backgroundPink ring-2 bg-slate-200'
-        guide={false}
-        id="my-input-id"
-        onBlur={() => { }}
-        onChange={() => { }}
-      />
+      <div className='flex flex-col gap-2'>
+        <label htmlFor='my-input-id'>Telefone</label>
+        <MaskedInput
+          mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
+          className='py-2 px-4 rounded-lg  ring-backgroundPink ring-2 bg-slate-200'
+          guide={false}
+          id="my-input-id"
+          onBlur={() => { }}
+          onChange={() => { }}
+        />
+        <span></span>
+      </div>
 
       <div className='flex flex-col gap-2'>
         <label htmlFor='contactReason'>Motivo do contato *</label>
@@ -62,7 +66,9 @@ function FormBody() {
       />
 
       <div className='flex justify-center pt-4'>
-        <Button value={'Enviar Formulario'} />
+        <Button>
+          Enviar Formulario
+        </Button>
       </div>
       <span className='text-center text-red-500'>* Campos obrigatórios</span>
     </form>

@@ -73,7 +73,9 @@ function FormularioProduto(props: Props) {
       <h2 className='text-xl text-start font-semibold select-none' >
         Total: {FormataBRL((Quantity * props.Price))}
       </h2>
-      <Button value='Adicionar ao carrinho' />
+      <Button >
+        Adicionar ao carrinho
+      </Button>
     </form>
   );
 }

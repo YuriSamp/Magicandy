@@ -10,8 +10,8 @@ function Cart() {
   const [Lista, setLista] = useRecoilState(CartAtom)
   const FinalPrice = Lista.reduce((acc, item) => acc += item.Quantity * item.Price, 0)
 
-  const onDeleteHandler = (index: number, e: React.FormEvent<HTMLFormElement>) => {
-    let newList = Lista.filter((item, arrIndex) => index !== arrIndex)
+  const onDeleteHandler = (index: number) => {
+    let newList = Lista.filter((_, arrIndex) => index !== arrIndex)
     setLista(newList)
   }
 
@@ -29,7 +29,7 @@ function Cart() {
             ))}
           </div>
           <div className='flex items-center gap=2 md:gap-52 '>
-            <Button value={"Finalizar compra"} href="../" type="LINK" />
+            <Button href="../checkout/passo1" type="LINK" >Ir para checkout</Button>
             {Subtotal(Lista.length, FinalPrice)}
           </div>
         </div>

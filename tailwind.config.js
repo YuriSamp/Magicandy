@@ -15,8 +15,8 @@ module.exports = {
         kalam: ['Kalam', 'cursive'],
       },
       backgroundImage: {
-        'home-banner': "url('/banner/banner-main.png')"
-      }
+        'home-banner': "url('/banner/banner-main.png')",
+      },
     },
   },
   plugins: [require('tailwind-scrollbar')({ nocompatible: true })],
