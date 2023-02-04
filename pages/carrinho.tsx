@@ -29,7 +29,7 @@ function Cart() {
             ))}
           </div>
           <div className='flex items-center gap=2 md:gap-52 '>
-            <Button href="../checkout" type="LINK" >Finalizar compra</Button>
+            <Button href="../checkout/passo1" type="LINK" >Ir para checkout</Button>
             {Subtotal(Lista.length, FinalPrice)}
           </div>
         </div>

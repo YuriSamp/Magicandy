@@ -5,11 +5,15 @@ import { FaBarcode } from 'react-icons/fa'
 
 export const FormularioCartao = () => {
   return (
-    <div className='flex flex-col'>
+    <section className='flex flex-col min-w-[810px]'>
       <div className='border-b-2 py-4 border-gray-300'>
         <p className='pb-4'>Cartões de credito:</p>
         <div className='flex gap-4 items-center'>
-          <input type='checkbox' />
+          <input
+            type='radio'
+            name='payment'
+            value='Card'
+          />
           <AiOutlineCreditCard className='w-6 h-6' />
           <Link href='' >Usar o cartão de credito para finalizar o pedido</Link>
         </div>
@@ -18,7 +22,11 @@ export const FormularioCartao = () => {
       <div className='border-b-2 py-8 border-gray-300'>
         <p className='pb-4'>Boleto:</p>
         <div className='flex gap-4 items-center'>
-          <input type='checkbox' />
+          <input
+            type='radio'
+            name='payment'
+            value='Boleto'
+          />
           <FaBarcode className='w-6 h-6' />
           <div className='max-w-xl'>Vencimento em 1 dia útil. A data de entrega será alterada devido ao tempo de processamento do Boleto. Veja mais na próxima página.</div>
         </div>
@@ -27,7 +35,11 @@ export const FormularioCartao = () => {
       <div className='border-b-2 py-8 border-gray-300'>
         <p className='pb-4'>Pix:</p>
         <div className='flex gap-4 items-center'>
-          <input type='checkbox' />
+          <input
+            type='radio'
+            name='payment'
+            value='Pix'
+          />
           <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className='w-6 h-6'>
             <defs />
             <g fill="#4BB8A9" fill-rule="evenodd">
@@ -40,21 +52,22 @@ export const FormularioCartao = () => {
       </div>
 
       <section className='flex justify-center items-center gap-12 pt-8 '>
-        <button
+        <Link
+          href='./passo1'
           className=' flex items-center justify-center gap-2 min-w-[110px] cursor-pointer text-lg p-2   radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite font-kalam rounded-lg select-none button-secondary'
         >
           <AiOutlineArrowLeft />
           Voltar
-        </button>
+        </Link>
 
-        <button
+        <Link
+          href='./passo3'
           className='flex items-center justify-center gap-2 min-w-[110px] cursor-pointer text-lg p-2   radius-5 ring-2 my-[1rem] ring-fontPurple bg-backgroundWhite  font-kalam rounded-lg select-none button-secondary'
-
         >
           Avançar
           <AiOutlineArrowRight />
-        </button>
+        </Link>
       </section>
-    </div>
+    </section>
   )
 }
