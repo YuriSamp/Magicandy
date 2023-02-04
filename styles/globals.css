@@ -77,14 +77,21 @@ input[type='range']::-webkit-slider-thumb {
   transform-origin: right;
 }
 
-.button-default,
-.button-secondary,
+.button-default:hover,
 input:active,
-input:focus {border: solid 1px transparent;}
+input:focus,
+textarea:focus,
+textarea:active,
+select:focus,
+select:active {border: solid 1px transparent;}
 
 .button-default:hover,
 input:active,
-input:focus {
+input:focus,
+textarea:focus,
+textarea:active,
+select:focus,
+select:active {
   border: solid 1px #ff8fb1;
   box-shadow:
     0px 0px 5px 2px #ff8fb1,

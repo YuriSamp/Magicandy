@@ -8,6 +8,7 @@ import Head from 'next/head'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { IProduto } from 'interface/IProduto';
 import { FilterHelper } from 'helpers/FilterHelper';
+import Image from 'next/image';
 
 //TODO : deixar mais semantico
 // mexer na função que controlado o estado da pagina, separa ela e tornar ela mais semantica
@@ -73,7 +74,7 @@ function Products({ db }: DataBase) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <main className='flex flex-col items-center min-h-screen w-full min-w-[320px]  bg-backgroundPink border-b-2 border-fontPurple'>
+      <main className='flex flex-col items-center w-full min-w-[320px]  bg-backgroundPink border-b-2 border-fontPurple'>
         <h1 className='text-4xl text-white font-kalam mt-6'>Products</h1>
         <div className='flex justify-center w-full flex-wrap gap-6 py-6'>
           <Search onChangeHandler={onChangeHandler} />
@@ -88,9 +89,23 @@ function Products({ db }: DataBase) {
             <option>Cupcakes</option>
           </select>
         </div>
-        <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 pt-16 pb-8  items-center justify-evenly flex-wrap">
-          {Products.map((product, index) => CardRender(product, index))}
+        
+        <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 pt-16 pb-8  items-center justify-evenly lg:items-start flex-wrap">
+          { 
+            Products.length > 0 ?
+            Products.map((product, index) => CardRender(product, index)) :
+            <div className='text-center text-2xl font-bold'>
+              <span>Produto não encontrado</span>
+              <Image 
+                alt=""
+                src="https://http.cat/404"
+                width={400}
+                height={400}
+              />
+            </div>
+          }
         </section>
+
         {QuantityofPages > 1 &&
           <section className='flex items-center gap-8 pb-8 '>
             <button
