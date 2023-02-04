@@ -101,10 +101,6 @@ input:focus {
 }
 
 
-
-
-
-
 .grid-cards div:nth-child(odd) span:nth-child(2){
 	padding-right: auto;
 }
@@ -118,8 +114,10 @@ input:focus {
 .grid-cards div:nth-child(even) {
 	flex-direction: row-reverse;
 }
-.grid-cards div {
-	background: linear-gradient(45deg, #03070f 20%, #050204 40%, #1d0112 100%);
+
+.bgMovingEffect {
+  background: linear-gradient(to top left, #FF8FB199 50%,
+    #FF8FB1 100% );
 	background-size: 600% 600%;
 
 	-webkit-animation: AnimationName 5s ease infinite;
@@ -141,4 +139,14 @@ input:focus {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+.wavy {
+  --mask:
+    radial-gradient(59.17px at 50% 81.00px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 51% repeat-x,
+    radial-gradient(59.17px at 50% -51px,#0000 99%,#000 101%) 50% 30px/120px calc(51% - 30px) repeat-x,
+    radial-gradient(59.17px at 50% calc(100% - 81.00px),#000 99%,#0000 101%) calc(50% - 60px) 100%/120px 51% repeat-x,
+    radial-gradient(59.17px at 50% calc(100% + 51.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px calc(51% - 30px) repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
 }

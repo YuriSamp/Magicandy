@@ -1,29 +1,38 @@
-import Head from 'next/head'
-import Card from '@ui/Card'
-import dbConnect from 'services/connect'
-import Product from 'models/product'
-import { DataBase } from 'interface/ServerSideDataBase'
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import unicornImg from 'public/unicorn2.png'
-import CategoryCard from '@ui/CategoryCard'
-
+import Head from "next/head";
+import Card from "@ui/Card";
+import dbConnect from "services/connect";
+import Product from "models/product";
+import { DataBase } from "interface/ServerSideDataBase";
+import { useEffect, useLayoutEffect, useState } from "react";
+import Image from "next/image";
+import unicornImg from "public/unicorn2.png";
+import CategoryCard from "@ui/CategoryCard";
+import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import CardTestimony from "@ui/CardTestimony/CardTestimony";
 
 export async function getStaticProps() {
-  dbConnect.connect()
+
+  dbConnect.connect();
   const database = await Product.find();
-  dbConnect.disconnect()
-  const DataBaseSerialize = JSON.parse(JSON.stringify(database))
+  dbConnect.disconnect();
+  const DataBaseSerialize = JSON.parse(JSON.stringify(database));
   const db = DataBaseSerialize.sort(() => 0.5 - Math.random()).splice(0, 3);
   return {
-    props: { db }
-  }
+    props: { db },
+  };
 }
 
 export default function Home({ db }: DataBase) {
-  const [domLoaded, setDomLoaded] = useState(false)
+  const [domLoaded, setDomLoaded] = useState(false);
+
   useEffect(() => {
     setDomLoaded(true);
+  }, []);
+
+  useLayoutEffect(() => {
+    AOS.init();
   }, []);
 
   return (
@@ -34,16 +43,8 @@ export default function Home({ db }: DataBase) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <main className='flex flex-col min-h-screen w-full min-w-[320px]  bg-backgroundPink overflow-x-hidden'>
-
-        {/* <div className='flex bg-home-banner p-1 bg-[60%] md:bg-[length:100%_100%] lg:bg-[length:100%_120%] bg-no-repeat bg-cover min-h-[300px] md:h-[400px] lg:h-[500px] items-center justify-center border-b-2 border-fontPurple'>
-          <h2 className='text-pink-900 z-10 mt-0 text-[2rem] lg:text-[55px] font-kalam relative 
-          before:block before:absolute before:inset-0 before:opacity-30 before:z-0 before:bg-white
-          '>A magia da felicidade <br className='hidden md:inline-block' />
-            <span className='md:ml-32'>para adoçar seu dia!</span> </h2>
-        </div> */}
-
-        <div className="h-[calc(100vh_-_146px)] w-screen overflow-hidden relative flex items-center justify-center">
+      <main className="flex flex-col items-center gap-8 min-h-screen w-full min-w-[320px]  bg-backgroundPink overflow-x-hidden pb-10 bgMovingEffect">
+        <section className="h-[calc(100vh_-_146px)] w-screen overflow-hidden relative flex items-center justify-center">
           <div className="opacity-90 w-full h-full">
             {domLoaded && (
               <video
@@ -52,42 +53,114 @@ export default function Home({ db }: DataBase) {
                 loop
                 muted
                 preload="auto"
-                playsInline>
-                <source src="/magicandy.mp4" type='video/mp4' />
+                playsInline
+              >
+                <source src="/magicandy.mp4" type="video/mp4" />
               </video>
             )}
           </div>
           <div className="flex flex-col justify-center items-center gap-6 max-w-[900px] text-backgroundWhite font-kalam absolute backdrop-blur-sm bg-black/30 border-none rounded-xl p-8">
-            <div className='flex items-center justify-center gap-6'>
+            <div className="flex items-center justify-center gap-6">
               <Image
-                className='w-[80px]'
+                className="w-[80px]"
                 src={unicornImg}
                 width={45}
                 height={45}
                 alt=""
               />
-              <h2 className='text-6xl'>Magicandy</h2>
+              <h2 className="text-6xl">Magicandy</h2>
             </div>
-            <p className='text-2xl text-justify teste'>Criada em 2023, a partir de um sonho e um compromisso, de fazer nossos produtos com amor e qualidade, para que em cada fatia, cada mordida e cada suspiro, possamos compartilhar com vocês a magia da felicidade. </p>
+            <p className="text-2xl text-justify teste">
+              Criada em 2023, a partir de um sonho e um compromisso, de fazer
+              nossos produtos com amor e qualidade, para que em cada fatia, cada
+              mordida e cada suspiro, possamos compartilhar com vocês a magia da
+              felicidade.
+            </p>
           </div>
-        </div>
+        </section>
 
+        <section className="max-w-[80%]">
+          <Link href="/produtos">
+            <div
+              className="rounded-3xl overflow-hidden items-center grid-cards min-w-[900px]"
+              title="Ver produtos"
+            >
+              <CategoryCard
+                productTitle="Tortas"
+                Src="/products/red-velvet-cake.png"
+                Alt="Um bolo"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                ducimus quae minima recusandae libero iusto unde soluta
+                repudiandae maiores quia, fuga asperiores quidem ullam,
+                explicabo, eum esse quod impedit. Commodi.
+              </CategoryCard>
+              <CategoryCard
+                productTitle="Brownies"
+                Src="/products/brownie-morango.png"
+                Alt="Um bolo"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                ducimus quae minima recusandae libero iusto unde soluta
+                repudiandae maiores quia, fuga asperiores quidem ullam,
+                explicabo, eum esse quod impedit. Commodi.
+              </CategoryCard>
+              <CategoryCard
+                productTitle="Donuts"
+                Src="/products/donuts-geleia.png"
+                Alt=""
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                ducimus quae minima recusandae libero iusto unde soluta
+                repudiandae maiores quia, fuga asperiores quidem ullam,
+                explicabo, eum esse quod impedit. Commodi.
+              </CategoryCard>
+              <CategoryCard
+                productTitle="Mousses"
+                Src="/products/mousse-limao.png"
+                Alt=""
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                ducimus quae minima recusandae libero iusto unde soluta
+                repudiandae maiores quia, fuga asperiores quidem ullam,
+                explicabo, eum esse quod impedit. Commodi.
+              </CategoryCard>
+              <CategoryCard
+                productTitle="Pavês"
+                Src="/products/pave-chocolate.png"
+                Alt=""
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                ducimus quae minima recusandae libero iusto unde soluta
+                repudiandae maiores quia, fuga asperiores quidem ullam,
+                explicabo, eum esse quod impedit. Commodi.
+              </CategoryCard>
+            </div>
+          </Link>
+        </section>
 
-        <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 py-16 border-b-2 border-[#8c52ff] items-center justify-evenly flex-wrap">
-          {
-            db.map(product => (
-              <Card
-                key={product._id}
-                _id={product._id}
-                Src={product.Src}
-                Alt={product.Alt}
-                ProductTitle={product.ProductTitle}
-                ProductPrice={product.ProductPrice}
-              />
-            ))
-          }
+        <section className="flex gap-4  border-2 border-t-fontPurple border-b-fontPurple border-r-transparent border-l-transparent flex-col bg-backgroundWhite py-[90px] p-6 font-kalam text-fontPurple w-full wavy">
+          <h2 className="text-center text-4xl">Depoimentos</h2>
+
+          <div className="flex flex-col gap-12 lg:gap-0 lg:flex-row justify-evenly">
+            <CardTestimony
+              Name="Joaozinho"
+              Description="FPOASKFPOSAKP POFKSAPO fsaPO JFPSAJ FPOSAJ pfoSAJ POFSAJP fjsap OJFPOSAJFpSAOJ fpSAOJ FPSAOJF pASOJ FPASOJ fpSAOJFPAOSJFP SAOJFPSAOJ PFSAOJFP SAOJF"
+              Img="https://http.cat/404"
+            />
+            <CardTestimony
+              Name="Joaozinho"
+              Description="FPOASKFPOSAKPF"
+              Img="https://http.cat/404"
+            />
+            <CardTestimony
+              Name="Joaozinho"
+              Description="FPOASKFPOSAKPF"
+              Img="https://http.cat/404"
+            />
+          </div>
         </section>
       </main>
     </>
-  )
+  );
 }
