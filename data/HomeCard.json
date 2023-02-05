@@ -2,26 +2,26 @@
   {
     "productTitle": "Tortas",
     "Src": "/products/red-velvet-cake.png",
-    "Text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum"
+    "Text": "Oferecemos uma ampla seleção de tortas feitas com ingredientes frescos. Sabores variados, desde frutas clássicas até opções elaboradas, como chocolate e nozes. Crosta fina e recheio denso e saboroso. Perfeitas para sobremesas caseiras ou eventos especiais"
   },
   {
     "productTitle": "Brownies",
     "Src": "/products/brownie-morango.png",
-    "Text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum"
+    "Text": "Satisfaça seu desejo por sobremesas decadentes com nossos incríveis brownies. Feitos com chocolate de alta qualidade e cobertos com gotas de chocolate, eles são o doce perfeito para acompanhar um café ou chá. Com uma textura macia e aveludada, cada mordida de nosso brownie é uma explosão de sabor"
   },
   {
     "productTitle": "Donuts",
     "Src": "/products/donuts-geleia.png",
-    "Text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum"
+    "Text": "Mergulhe no mundo do doce com nossa seleção de donuts. Escolha entre uma ampla variedade de sabores e coberturas, desde glacê simples até coberturas elaboradas com gotas de chocolate e nozes. Cada donut é feito com massa fofa e leve, garantindo uma experiência de mordida suave e satisfatória"
   },
   {
     "productTitle": "Mousses",
     "Src": "/products/mousse-limao.png",
-    "Text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum"
+    "Text": "Delicie-se com nossas cremosas e suaves mousses. Feitas com ingredientes de alta qualidade, nossas mousses vêm em uma ampla variedade de sabores, desde chocolate até frutas da estação. Com sua textura leve e refrescante, nossas mousses são perfeitas para uma sobremesa leve ou uma sobremesa após um jantar elegante."
   },
   {
     "productTitle": "Pavês",
     "Src": "/products/pave-chocolate.png",
-    "Text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum"
+    "Text": "Sabor e sofisticação se unem em nossos pavês incríveis. Escolha entre uma ampla variedade de sabores, desde pavê de chocolate até pavê de frutas da estação. Cada camada é feita com massa macia e creme suave, garantindo uma experiência de mordida única e satisfatória."
   }
 ]

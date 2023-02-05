@@ -17,12 +17,14 @@ export default function PagamentoBox({ type, text }: Props) {
       </g>
     </svg>
 
-
   const SvgRender = (type: string) => {
     if (type == 'Cartões de credito')
       return <AiOutlineCreditCard className='w-6 h-6' />
     if (type == "Boleto")
       return <FaBarcode className='w-6 h-6' />
+    else {
+      return svgPix
+    }
   }
 
   return (
