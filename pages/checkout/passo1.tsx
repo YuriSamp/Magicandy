@@ -1,6 +1,5 @@
 
 import CheckoutRender from '@ui/Checkout/CheckoutRender'
-import { FormularioCheckout } from '@ui/Checkout/InformacaoUsuario'
 import Head from 'next/head'
 import React from 'react'
 

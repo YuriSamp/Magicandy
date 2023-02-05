@@ -10,7 +10,7 @@ export default function Custom404() {
       <Head>
         <title>Not Found</title>
       </Head>
-      <main className='bg-backgroundPink min-h-[calc(100vh-316px)] flex justify-center items-center'>
+      <main className=' bgMovingEffect min-h-[calc(100vh-316px)] flex justify-center items-center'>
         <div className='bg-backgroundWhite flex items-center border-2 border-fontPurple rounded-lg'>
           <div className='flex flex-col items-center px-20'>
             <p className='font-kalam text-2xl'>Não achou o que estava procurando?</p>

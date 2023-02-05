@@ -10,7 +10,7 @@ export const RevisarPedido = () => {
   const [Lista, _] = useRecoilState(CartAtom)
 
   return (
-    <section className='flex flex-col min-w-[810px]'>
+    <section className='flex flex-col min-w-[810px] '>
       <div className='flex flex-col gap-4'>
         {Lista.map((item, index) => (
           <div className='border-2 border-gray-300 px-4 rounded-lg py-2' key={index}>

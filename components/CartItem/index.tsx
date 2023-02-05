@@ -1,4 +1,3 @@
-import Button from '@ui/Button';
 import Image from 'next/image'
 import React from 'react'
 import { FormataBRL } from 'utils/ConvertCurrency'

@@ -8,7 +8,7 @@ interface Props {
 
 export default function CheckoutRender({ Passo }: Props) {
   return (
-    <main className='bg-backgroundPink flex flex-col justify-center items-center p-12 py-16'>
+    <main className=' bgMovingEffect flex flex-col justify-center items-center p-12 py-16'>
       <div className='flex rounded-lg border-2 border-fontPurple overflow-hidden'>
         <form
           className='flex flex-col gap-4 w-full  bg-backgroundWhite p-10 rounded-r-lg'

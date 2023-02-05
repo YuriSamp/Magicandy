@@ -83,7 +83,9 @@ input:focus,
 textarea:focus,
 textarea:active,
 select:focus,
-select:active {border: solid 1px transparent;}
+select:active {
+  border: solid 1px transparent;
+}
 
 .button-default:hover,
 input:active,
@@ -93,67 +95,82 @@ textarea:active,
 select:focus,
 select:active {
   border: solid 1px #ff8fb1;
-  box-shadow:
-    0px 0px 5px 2px #ff8fb1,
-    inset 0 0 1px 1px #ff8fb1,
+  box-shadow: 0px 0px 5px 2px #ff8fb1, inset 0 0 1px 1px #ff8fb1,
     0px 0px 10px 5px #ff8fb144;
 }
 
 .button-secondary:hover {
   border: solid 1px #8c52ff;
-  box-shadow:
-    0px 0px 5px 2px #8c52ff,
-    inset 0 0 1px 1px #8c52ff,
+  box-shadow: 0px 0px 5px 2px #8c52ff, inset 0 0 1px 1px #8c52ff,
     0px 0px 10px 5px #8c52ff44;
 }
 
-
-.grid-cards div:nth-child(odd) span:nth-child(2){
-	padding-right: auto;
+.grid-cards div:nth-child(odd) span:nth-child(2) {
+  padding-right: auto;
 }
-.grid-cards div:nth-child(even) span:nth-child(2){
-	padding-left: auto;
+.grid-cards div:nth-child(even) span:nth-child(2) {
+  padding-left: auto;
 }
 
 .grid-cards div:nth-child(odd) {
-	--cards-pares: "";
+  --cards-pares: '';
 }
 .grid-cards div:nth-child(even) {
-	flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .bgMovingEffect {
-  background: linear-gradient(to top left, #FF8FB199 50%,
-    #FF8FB1 100% );
-	background-size: 600% 600%;
+  background: linear-gradient(to top left, #ffaec6 50%, #ff8fb1 100%);
+  background-size: 600% 600%;
 
-	-webkit-animation: AnimationName 5s ease infinite;
-	-moz-animation: AnimationName 5s ease infinite;
-	animation: BgMove 5s ease infinite;
+  -webkit-animation: AnimationName 5s ease infinite;
+  -moz-animation: AnimationName 5s ease infinite;
+  animation: BgMove 5s ease infinite;
 }
 
 @-webkit-keyframes BgMove {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @-moz-keyframes BgMove {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @keyframes BgMove {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .wavy {
-  --mask:
-    radial-gradient(59.17px at 50% 81.00px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 51% repeat-x,
-    radial-gradient(59.17px at 50% -51px,#0000 99%,#000 101%) 50% 30px/120px calc(51% - 30px) repeat-x,
-    radial-gradient(59.17px at 50% calc(100% - 81.00px),#000 99%,#0000 101%) calc(50% - 60px) 100%/120px 51% repeat-x,
-    radial-gradient(59.17px at 50% calc(100% + 51.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px calc(51% - 30px) repeat-x;
+  --mask: radial-gradient(59.17px at 50% 81px, #000 99%, #0000 101%)
+      calc(50% - 60px) 0/120px 51% repeat-x,
+    radial-gradient(59.17px at 50% -51px, #0000 99%, #000 101%) 50% 30px/120px
+      calc(51% - 30px) repeat-x,
+    radial-gradient(59.17px at 50% calc(100% - 81px), #000 99%, #0000 101%)
+      calc(50% - 60px) 100%/120px 51% repeat-x,
+    radial-gradient(59.17px at 50% calc(100% + 51px), #0000 99%, #000 101%) 50%
+      calc(100% - 30px) / 120px calc(51% - 30px) repeat-x;
   -webkit-mask: var(--mask);
-          mask: var(--mask);
+  mask: var(--mask);
 }

@@ -53,8 +53,8 @@ function Products({ db }: DataBase) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <main className='flex flex-col items-center w-full min-w-[320px]  bg-backgroundPink border-b-2 border-fontPurple'>
-        <h1 className='text-4xl text-white font-kalam mt-6'>Produtos</h1>
+      <main className='flex flex-col items-center w-full min-w-[320px]  bgMovingEffect border-b-2 border-fontPurple'>
+        <h1 className='text-4xl text-fontPurple font-kalam mt-6'>Produtos</h1>
         <div className='flex justify-center w-full flex-wrap gap-6 py-6'>
           <Search onChangeHandler={onChangeHandler} />
           <select id='filterSelect' className='py-2 px-4 w-[229px] text-center rounded-lg ring-fontPurple ring-2 bg-white'
