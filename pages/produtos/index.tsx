@@ -63,7 +63,7 @@ function Products({ db }: DataBase) {
           </select>
         </div>
 
-        <section className="flex grow text-black flex-col h-full gap-x-42 lg:flex-row lg:px-48 gap-16 md:gap-8 px-2 pt-16 pb-8  items-center justify-evenly lg:items-start flex-wrap">
+        <section className="grid gap-12 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 text-black h-full gap-x-42 lg:px-48 gap-16 md:gap-8 px-2 pt-16 pb-8">
           {
             Products.length > 0 ?
               Products.map((product, index) => CardRender(product, index, Page)) :
