@@ -105,6 +105,7 @@ select:active {
     0px 0px 10px 5px #8c52ff44;
 }
 
+@media screen and (min-width: 64em) {
 .grid-cards div:nth-child(odd) span:nth-child(2) {
   padding-right: auto;
 }
@@ -117,6 +118,7 @@ select:active {
 }
 .grid-cards div:nth-child(even) {
   flex-direction: row-reverse;
+}
 }
 
 .bgMovingEffect {
