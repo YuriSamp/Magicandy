@@ -67,7 +67,7 @@ function Products({ db }: DataBase) {
           {
             Products.length > 0 ?
               Products.map((product, index) => CardRender(product, index, Page)) :
-              <div className='text-center text-2xl font-bold'>
+              <div className='col-span-full text-center text-2xl font-bold'>
                 <span>Produto não encontrado</span>
                 <Image
                   alt=""
