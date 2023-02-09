@@ -9,6 +9,7 @@ import { FilterHelper } from 'helpers/ProdutcHelpers/FilterHelper';
 import Image from 'next/image';
 import { handleQuantityMinus, handleQuantityPlus } from 'helpers/ProdutcHelpers/HandleQuantity';
 import { CardRender } from 'helpers/ProdutcHelpers/ItemRender';
+import SearchNotFound from 'public/search-notfound.png'
 
 const opcoes = ['Todos',
   'Bolos',
@@ -65,13 +66,13 @@ function Products({ db }: DataBase) {
 
         <section className="grid gap-12 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 text-black h-full gap-x-42 lg:px-48 gap-16 md:gap-8 px-2 pt-16 pb-8">
           {
-            Products.length > 0 ?
-              Products.map((product, index) => CardRender(product, index, Page)) :
-              <div className='col-span-full text-center text-2xl font-bold'>
-                <span>Produto não encontrado</span>
+            Products.length > 0
+              ? Products.map((product, index) => CardRender(product, index, Page))
+              : <div className='col-span-full text-center text-2xl font-bold'>
+                <span className='inline-block mb-6'>Produto não encontrado</span>
                 <Image
                   alt=""
-                  src="https://http.cat/404"
+                  src={SearchNotFound}
                   width={400}
                   height={400}
                 />

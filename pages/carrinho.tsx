@@ -28,7 +28,7 @@ function Cart() {
               <CartItem key={index} Name={item.Name} Imagem={item.Image} Quantity={item.Quantity} Price={item.Price} OnDeleteHandler={onDeleteHandler} Index={index} />
             ))}
           </div>
-          <div className='flex items-center gap=2 md:gap-52 '>
+          <div className='flex items-center flex-col md:flex-row gap-2 md:gap-52 '>
             <Button href="../checkout/passo1" type="LINK" >Ir para checkout</Button>
             {Subtotal(Lista.length, FinalPrice)}
           </div>

@@ -4,9 +4,9 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 
 export const FormularioCheckout = () => {
   return (
-    <section className='flex flex-col min-w-[810px]'>
-      <div className='flex gap-12 justify-center items-center'>
-        <div className='space-y-2'>
+    <section className='flex flex-col '>
+      <div className='flex flex-col gap-3 md:flex-row md:gap-12 justify-center items-center w-full'>
+        <div className='flex flex-col gap-3 w-full'>
           <Fields
             Name="name"
             Label="Nome"
@@ -23,7 +23,7 @@ export const FormularioCheckout = () => {
             Type="text"
           />
         </div>
-        <div className='space-y-2'>
+        <div className='flex flex-col gap-3 w-full'>
           <Fields
             Name="Sobrenome"
             Label="Sobrenome"

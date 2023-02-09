@@ -4,7 +4,7 @@ import PagamentoBox from './PagamentoBox'
 
 export const FormularioCartao = () => {
   return (
-    <section className='flex flex-col min-w-[810px]'>
+    <section className='flex flex-col'>
       <PagamentoBox
         type='Cartões de credito'
         text='Usar o cartão de credito para finalizar o pedido'

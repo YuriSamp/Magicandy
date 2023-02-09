@@ -16,7 +16,7 @@ export default function Custom404() {
             <p className='font-kalam text-2xl'>Não achou o que estava procurando?</p>
             <div className='flex items-center'>
               <Link
-                className='flex items-center justify-center gap-2 cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-backgroundPink font-kalam rounded-lg select-none'
+                className='flex items-center justify-center gap-2 cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-backgroundPink font-kalam rounded-lg select-none button-default'
                 href='../produtos'
               >
                 <AiOutlineArrowLeft />Ver produtos

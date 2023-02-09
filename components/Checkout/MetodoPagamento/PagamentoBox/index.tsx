@@ -9,7 +9,7 @@ interface Props {
 export default function PagamentoBox({ type, text }: Props) {
 
   const svgPix =
-    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className='w-6 h-6'>
+    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className='w-6 h-6 shrink-0'>
       <defs />
       <g fill="#4BB8A9" fill-rule="evenodd">
         <path d="M393.072 391.897c-20.082 0-38.969-7.81-53.176-22.02l-77.069-77.067c-5.375-5.375-14.773-5.395-20.17 0l-76.784 76.786c-14.209 14.207-33.095 22.019-53.179 22.019h-9.247l97.521 97.52c30.375 30.375 79.614 30.375 109.988 0l97.239-97.238h-15.123zm-105.049 74.327c-8.55 8.53-19.93 13.25-32.05 13.25h-.02c-12.12 0-23.522-4.721-32.05-13.25l-56.855-56.855c7.875-4.613 15.165-10.248 21.758-16.84l63.948-63.948 64.23 64.23c7.637 7.66 16.188 14.013 25.478 18.952l-54.439 54.46zM310.958 22.78c-30.374-30.374-79.613-30.374-109.988 0l-97.52 97.52h9.247c20.082 0 38.97 7.834 53.178 22.02l76.784 76.785c5.57 5.592 14.622 5.57 20.17 0l77.069-77.068c14.207-14.187 33.094-22.02 53.176-22.02h15.123l-97.239-97.237zm6.028 96.346l-64.23 64.23-63.97-63.97c-6.593-6.592-13.86-12.206-21.736-16.818l56.853-56.877c17.69-17.645 46.476-17.668 64.121 0l54.44 54.461c-9.292 4.961-17.842 11.315-25.479 18.974h.001z" />
@@ -19,28 +19,31 @@ export default function PagamentoBox({ type, text }: Props) {
 
   const SvgRender = (type: string) => {
     if (type == 'Cartões de credito')
-      return <AiOutlineCreditCard className='w-6 h-6' />
+      return <AiOutlineCreditCard className='w-6 h-6 shrink-0' />
     if (type == "Boleto")
-      return <FaBarcode className='w-6 h-6' />
+      return <FaBarcode className='w-6 h-6 shrink-0' />
     else {
       return svgPix
     }
   }
 
   return (
-    <div className='border-b-2 py-8 border-gray-300'>
-      <p className='pb-4'>{type}:</p>
+    <label htmlFor={type} className='border-b-2 pb-8 border-gray-300 cursor-pointer mb-8'>
+      <span className='inline-block mb-4'>{type}:</span>
+
       <div className='flex gap-4 items-center'>
         <input
+          className='accent-fontPurple w-4 h-4'
+          id={type}
           type='radio'
           name='payment'
           value='Boleto'
         />
-        <div>
-          {SvgRender(type)}
-        </div>
+
+        {SvgRender(type)}
+        
         <p className='max-w-xl'>{text}</p>
       </div>
-    </div>
+    </label>
   )
 }
