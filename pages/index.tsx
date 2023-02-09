@@ -46,7 +46,7 @@ export default function Home() {
 
         <section className="flex gap-4  border-2 border-t-fontPurple border-b-fontPurple border-r-transparent border-l-transparent flex-col bg-backgroundWhite py-[90px] p-6 font-kalam text-fontPurple w-full wavy">
           <h2 className="text-center text-4xl">Depoimentos</h2>
-          <div className="flex flex-col items-center gap-12 lg:gap-0 lg:flex-row justify-evenly">
+          <div className="flex flex-col items-center  gap-12  xl:flex-row xl:items-stretch justify-evenly">
             {testimony.map((item, index) =>
               <CardTestimony
                 Name={item.Name}

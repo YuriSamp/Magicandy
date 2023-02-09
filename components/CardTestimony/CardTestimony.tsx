@@ -7,14 +7,16 @@ interface Props {
 }
 
 const CardTestimony = (props: Props) => {
+    console.log(props.Img)
+   
     return (
         <div
-            className='flex flex-col max-w-[500px] items-center gap-4 w-full md:1/2 lg:w-1/4 border-2 rounded-xl border-fontPurple p-8 bg-backgroundWhite' data-aos="flip-right"
+            className='flex flex-col max-w-[500px] items-center gap-4 w-full md:1/2 border-2 rounded-xl border-fontPurple p-8 bg-backgroundWhite' data-aos="flip-right"
             data-aos-once="true"
             data-aos-offset="-700"
         >
             <Image
-                className='h-[140px] w-[140px] border-2 border-black rounded-full'
+                className='h-[140px] w-[140px] object-cover border-2 border-black rounded-full'
                 src={props.Img}
                 alt=""
                 width={200} height={200}
