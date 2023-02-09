@@ -7,7 +7,6 @@ interface Props {
 }
 
 const CardTestimony = (props: Props) => {
-    console.log(props.Img)
    
     return (
         <div
