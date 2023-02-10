@@ -8,6 +8,7 @@ import CardTestimony from "@ui/CardTestimony/CardTestimony";
 import cards from '../data/HomeCard.json'
 import testimony from '../data/testimony.json'
 import dynamic from "next/dynamic";
+import unicornImg from "public/homeunicorn.png";
 
 const DynamicHomeVideo = dynamic(() => import('@ui/HomeVideo'), {ssr: false})
 
@@ -23,7 +24,7 @@ export default function Home() {
         <title>MagiCandy</title>
       </Head>
       <main className="flex flex-col items-center gap-8 min-h-screen w-full min-w-[320px]  overflow-x-hidden pb-10 bgMovingEffect border-b-2 border-fontPurple">
-        <DynamicHomeVideo />
+        <DynamicHomeVideo uni={unicornImg} />
         <section className="max-w-[80%]">
           <Link href="/produtos">
             <div

@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import unicornImg from "/public/unicorn2.png";
 
 
 
-export default function HomeVideo() {
+
+export default function HomeVideo(props: any) {
   
   return (
     <section className="h-[calc(100vh_-_314px)] md:h-[calc(100vh_-_206px)] lg:h-[calc(100vh_-_146px)] w-screen overflow-hidden relative flex items-center justify-center">
@@ -25,7 +25,7 @@ export default function HomeVideo() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           <Image
             className="w-[60px] md:w-[80px]"
-            src={unicornImg}
+            src={props.uni}
             width={45}
             height={45}
             alt=""
