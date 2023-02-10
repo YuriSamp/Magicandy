@@ -50,7 +50,7 @@ const UniqueProduct = (db: DataBase) => {
         arr.map(item => (
           <div className='bg-white text-black rounded-lg drop-shadow-xl border-2 border-fontPurple p-2 max-w-[1000px]' key={item._id}>
             <div className='flex flex-col md:flex-row justify-between'>
-              <Image src={item.Src} alt={item.Alt} width={500} height={400} className='rounded-lg w-full grow md:w-[50%]'></Image>
+              <Image src={item.Src} alt={item.Alt} width={500} height={400} className='rounded-lg w-full grow md:w-[50%]' />
 
               <div className='px-8 flex flex-col'>
 

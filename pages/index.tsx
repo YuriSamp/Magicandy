@@ -24,7 +24,7 @@ export default function Home() {
         <title>MagiCandy</title>
       </Head>
       <main className="flex flex-col items-center gap-8 min-h-screen w-full min-w-[320px]  overflow-x-hidden pb-10 bgMovingEffect border-b-2 border-fontPurple">
-        <DynamicHomeVideo uni={unicornImg} />
+        <DynamicHomeVideo UnicornImg={unicornImg} />
         <section className="max-w-[80%]">
           <Link href="/produtos">
             <div
