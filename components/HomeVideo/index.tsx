@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import unicornImg from "/unicorn2.png";
+import unicornImg from "/public/unicorn2.png";
 
 
 
