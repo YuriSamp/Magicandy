@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useEffect } from "react";
 import CategoryCard from "@ui/CategoryCard";
 import Link from "next/link";
 import CardTestimony from "@ui/CardTestimony/CardTestimony";
@@ -8,7 +7,7 @@ import testimony from '../data/testimony.json'
 import dynamic from "next/dynamic";
 import unicornImg from "public/homeunicorn.png";
 
-const DynamicHomeVideo = dynamic(() => import('@ui/HomeVideo'), {ssr: false})
+const DynamicHomeVideo = dynamic(() => import('@ui/HomeVideo'), { ssr: false })
 
 export default function Home() {
 

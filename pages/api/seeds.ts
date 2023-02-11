@@ -7,7 +7,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   await dbConnect.connect();
   await Product.deleteMany();
   await Product.insertMany(dbLocal);
-  await dbConnect.disconnect();
   res.send({ message: 'deu tudo certo' });
 };
 
