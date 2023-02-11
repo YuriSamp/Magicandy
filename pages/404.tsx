@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import NotFound from 'public/page404.png'
-import { AiOutlineArrowLeft } from 'react-icons/ai'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import NotFound from "public/page404.png";
+import { AiOutlineArrowLeft } from "react-icons/ai";
+import Link from "next/link";
 
 export default function Custom404() {
   return (
@@ -10,25 +10,31 @@ export default function Custom404() {
       <Head>
         <title>Not Found</title>
       </Head>
-      <main className=' bgMovingEffect min-h-[calc(100vh-316px)] flex justify-center items-center'>
-        <div className='bg-backgroundWhite flex items-center border-2 border-fontPurple rounded-lg'>
-          <div className='flex flex-col items-center px-20'>
-            <p className='font-kalam text-2xl'>Não achou o que estava procurando?</p>
-            <div className='flex items-center'>
+      <main className=" bgMovingEffect flex min-h-[calc(100vh-316px)] items-center justify-center p-12">
+        <div className="flex flex-col  rounded-lg border-2 border-fontPurple items-stretch bg-backgroundWhite md:flex-row">
+          <div className="flex flex-col items-center gap-4 justify-center text-center p-6 md:p-12 px-20">
+            <p className="font-kalam text-2xl">
+              Não achou o que estava procurando?
+            </p>
+            <div className="flex items-center">
               <Link
-                className='flex items-center justify-center gap-2 cursor-pointer text-lg p-2  mx-auto radius-5 ring-2 my-[1rem] ring-backgroundPink font-kalam rounded-lg select-none button-default'
-                href='../produtos'
+                className="radius-5 button-default mx-auto my-[1rem] flex cursor-pointer select-none  items-center justify-center gap-2 rounded-lg p-2 font-kalam text-lg ring-2 ring-backgroundPink"
+                href="../produtos"
               >
-                <AiOutlineArrowLeft />Ver produtos
+                <AiOutlineArrowLeft />
+                Ver produtos
               </Link>
             </div>
           </div>
-          <div className='flex flex-col flex-wrap-reverse'>
-            <Image src={NotFound} alt='foto de garotos olhando atráves de donuts' className='rounded-r-lg' width={600} height={400} />
-          </div>
+          <Image
+            src={NotFound}
+            alt="foto de garotos olhando atráves de donuts"
+            className="rounded-r-lg"
+            width={600}
+            height={400}
+          />
         </div>
       </main>
     </>
-  )
+  );
 }
-

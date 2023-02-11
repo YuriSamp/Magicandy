@@ -54,7 +54,7 @@ const UniqueProduct = (db: DataBase) => {
 
               <div className='px-8 flex flex-col'>
 
-                <h1 className='text-2xl my-6 text-fontPurple font-kalam ' >
+                <h1 className='text-2xl my-6 text-fontPurple text-center md:text-start font-kalam ' >
                   {item.ProductTitle}
                 </h1>
 

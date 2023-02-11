@@ -23,7 +23,7 @@ function FormBody() {
 
   return (
     <form
-      className='flex flex-col gap-4 w-full max-w-[30rem] bg-backgroundWhite p-10 rounded-r-lg'
+      className='flex flex-col gap-4 w-full max-w-[30rem] bg-backgroundWhite p-10 rounded-l-lg md:rounded-l-none rounded-r-lg'
       onSubmit={onSubmitHandler}
     >
       <div className='pt-4 text-center'>

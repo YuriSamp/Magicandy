@@ -13,9 +13,9 @@ interface Props {
 
 function CartItem(props: Props) {
   return (
-    <div data-index={props.Index} className='flex flex-row flex-wrap gap-2 items-center w-full max-w-[700px] border-fontPurple border-2 rounded-lg my-4 overflow-hidden'>
+    <div data-index={props.Index} className='flex flex-col md:flex-row gap-2 items-center w-full border-fontPurple border-2 rounded-lg my-4 overflow-hidden'>
       <Image
-        className='w-full h-full md:w-[300px] self-center'
+        className='w-full h-full md:max-w-[300px] self-center'
         width={300}
         height={300}
         alt=""
