@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Search from '@ui/Search'
 import Product from 'models/product';
-import dbConnect from 'services/connect';
 import { DataBase } from 'interface/ServerSideDataBase'
 import Head from 'next/head'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
@@ -10,6 +9,7 @@ import Image from 'next/image';
 import { handleQuantityMinus, handleQuantityPlus } from 'helpers/ProdutcHelpers/HandleQuantity';
 import { CardRender } from 'helpers/ProdutcHelpers/ItemRender';
 import SearchNotFound from 'public/search-notfound.png'
+import dbConnect from 'services/connect';
 
 const opcoes = ['Todos',
   'Bolos',
@@ -22,7 +22,6 @@ const opcoes = ['Todos',
 export async function getStaticProps() {
   dbConnect.connect()
   const database = await Product.find();
-  dbConnect.disconnect()
   return {
     props: { db: JSON.parse(JSON.stringify(database)) }
   }
@@ -64,7 +63,7 @@ function Products({ db }: DataBase) {
           </select>
         </div>
 
-        <section className="grid gap-12 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 text-black h-full gap-x-42 lg:px-48 gap-16 md:gap-8 px-2 pt-16 pb-8">
+        <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 text-black h-full gap-x-42 lg:px-48 gap-16 md:gap-8 px-2 pt-16 pb-8">
           {
             Products.length > 0
               ? Products.map((product, index) => CardRender(product, index, Page))
