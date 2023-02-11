@@ -1,4 +1,3 @@
-
 import CheckoutRender from '@ui/Checkout/CheckoutRender'
 import Head from 'next/head'
 import React from 'react'

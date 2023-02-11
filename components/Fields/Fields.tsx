@@ -13,8 +13,17 @@ function Fields({ Name, Label, Type }: Props) {
             <label htmlFor={Name}>{Label}</label>
             {
                 Type != "textarea"
-                    ? <input type={Type} id={Name} className='py-2 px-4 rounded-lg  ring-backgroundPink ring-2 bg-slate-200' />
-                    : <textarea id={Name} className='py-2 px-4 rounded-lg resize-none h-40 ring-backgroundPink ring-2 bg-slate-200' />
+                    ? <input 
+                        className='py-2 px-4 rounded-lg  ring-backgroundPink ring-2 bg-slate-200'
+                        type={Type}
+                        id={Name}
+                        maxLength={50}
+                    />
+                    : <textarea
+                        className='py-2 px-4 rounded-lg resize-none h-40 ring-backgroundPink ring-2 bg-slate-200'
+                        id={Name}
+                        maxLength={200}
+                    />
             }
             <span></span>
         </div>

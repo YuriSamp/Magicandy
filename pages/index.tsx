@@ -1,9 +1,7 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import CategoryCard from "@ui/CategoryCard";
 import Link from "next/link";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
 import CardTestimony from "@ui/CardTestimony/CardTestimony";
 import cards from '../data/HomeCard.json'
 import testimony from '../data/testimony.json'
@@ -13,10 +11,6 @@ import unicornImg from "public/homeunicorn.png";
 const DynamicHomeVideo = dynamic(() => import('@ui/HomeVideo'), {ssr: false})
 
 export default function Home() {
-
-  useEffect(() => {
-    //  AOS.init();
-  }, []);
 
   return (
     <>

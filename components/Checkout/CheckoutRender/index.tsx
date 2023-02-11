@@ -11,7 +11,7 @@ export default function CheckoutRender({ Passo }: Props) {
     <main className=' bgMovingEffect flex flex-col justify-center items-center p-12 py-16'>
       <div className='flex rounded-lg border-2 border-fontPurple overflow-hidden'>
         <form
-          className='flex flex-col gap-4 w-full  bg-backgroundWhite p-10 rounded-r-lg'
+          className='flex flex-col gap-4 w-full  bg-backgroundWhite p-4 rounded-r-lg'
         // onSubmit={onSubmitHandler}
         >
           <div className='pt-4 text-center'>

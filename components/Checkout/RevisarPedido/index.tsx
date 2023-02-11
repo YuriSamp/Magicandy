@@ -17,11 +17,10 @@ export const RevisarPedido = () => {
       <div className="flex flex-col gap-4">
         {Lista.map((item, index) => (
           <div
-            className="rounded-lg border-2 border-gray-300 px-4 py-2"
+            className="rounded-lg border-2 border-gray-300"
             key={index}
           >
-            <div className="flex gap-8 pt-6">
-              <div className="w-1/2">
+            <div className="flex gap-8 ">
                 <CheckoutCard
                   Name={item.Name}
                   Imagem={item.Image}
@@ -29,18 +28,6 @@ export const RevisarPedido = () => {
                   Price={item.Price}
                   Index={index}
                 />
-              </div>
-              <div className="flex flex-col pl-16 pt-2">
-                <p>Escolha sua opção de entrega</p>
-                <div className="flex gap-2">
-                  <input type="radio" name="shipment" value="Card" />
-                  <p> Entrega expressa + {FormataBRL(14)}</p>
-                </div>
-                <div className="flex gap-2">
-                  <input type="radio" name="shipment" value="Card" />
-                  <p>Entrega comum</p>
-                </div>
-              </div>
             </div>
           </div>
         ))}

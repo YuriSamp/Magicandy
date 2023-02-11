@@ -5,41 +5,43 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 export const FormularioCheckout = () => {
   return (
     <section className='flex flex-col '>
-      <div className='flex flex-col gap-3 md:flex-row md:gap-12 justify-center items-center w-full'>
-        <div className='flex flex-col gap-3 w-full'>
-          <Fields
-            Name="name"
-            Label="Nome"
-            Type="text"
-          />
-          <Fields
-            Name="Email"
-            Label="E-mail"
-            Type="email"
-          />
-          <Fields
-            Name="Cep"
-            Label="Cep"
-            Type="text"
-          />
-        </div>
-        <div className='flex flex-col gap-3 w-full'>
-          <Fields
-            Name="Sobrenome"
-            Label="Sobrenome"
-            Type="text"
-          />
-          <Fields
-            Name="telephone"
-            Label="Telefone"
-            Type="tel"
-          />
-          <Fields
-            Name="Complemento"
-            Label="Complemento (adicional)"
-            Type="text"
-          />
-        </div>
+      <div className='flex flex-col gap-3 md:gap-12 justify-center items-center w-full'>
+		<Fields
+		Name="name"
+		Label="Nome"
+		Type="text"
+		/>
+
+		<Fields
+		Name="Sobrenome"
+		Label="Sobrenome"
+		Type="text"
+		/>
+		<Fields
+		Name="Email"
+		Label="E-mail"
+		Type="email"
+		/>
+		<Fields
+		Name="Cep"
+		Label="Cep"
+		Type="text"
+		/>
+		<Fields
+		Name="Endereco"
+		Label="Endereço"
+		Type="text"
+		/>
+		<Fields
+		Name="telephone"
+		Label="Telefone"
+		Type="tel"
+		/>
+		<Fields
+		Name="Complemento"
+		Label="Complemento (adicional)"
+		Type="text"
+		/>
       </div>
 
       <section className='flex justify-center items-center gap-12 pt-8 '>

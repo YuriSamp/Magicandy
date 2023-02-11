@@ -4,9 +4,6 @@ import React from 'react'
 function CategoryCard(props: any) {
   return (
     <div 
-        data-aos="flip-up"
-        data-aos-once="true"
-        data-aos-offset="-70"
         className='flex flex-col rounded-3xl lg:rounded-none overflow-hidden lg:flex-row items-stretch justify-center bg-backgroundWhite text-fontPurple '
     >
         <Image
