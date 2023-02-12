@@ -3,7 +3,7 @@ import SocialMedia from './SocialMedia'
 const Footer = () => {
     return (
         <footer className="flex flex-col items-center gap-2 text-fontPurple text-3xl border-t-2 pt-6 bg-[#f8f8ff]">
-            <h3 className="font-bold">Magicandy</h3>
+            <h2 className="font-bold">Magicandy</h2>
             <p className="text-xl text-black">Projeto e design desenvolvidos por:</p>
             <div className='flex flex-col pb-4 md:flex-row gap-10'>
                 <SocialMedia

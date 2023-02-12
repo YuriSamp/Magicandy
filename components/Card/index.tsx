@@ -14,9 +14,9 @@ const Card = (props: IProduto) => {
                 alt={props.Alt}
             />
             <div className="flex flex-col h-full py-5 w-full text-fontPurplborder-fontPurple bg-backgroundWhite gap-4 border-t-fontPurplborder-fontPurple border-t-2 justify-between">
-                <h3 className="text-2xl font-kalam text-fontPurple">
+                <h2 className="text-2xl font-kalam text-fontPurple">
                     {props.ProductTitle}
-                </h3>
+                </h2>
                 <span className="text-xl">
                     {FormataBRL(props.ProductPrice)}
                 </span>
