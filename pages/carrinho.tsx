@@ -1,6 +1,5 @@
 import React from "react";
 import CartItem from "@ui/CartItem";
-import Button from "@ui/Button";
 import { useRecoilState } from "recoil";
 import { CartAtom } from "context/Atom";
 import Head from "next/head";

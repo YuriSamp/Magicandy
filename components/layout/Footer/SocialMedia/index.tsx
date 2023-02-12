@@ -14,10 +14,14 @@ function SocialMedia({ Github, Linkedin, Nome, Css }: Props) {
   return (
     <div className={Css}>
       <p className='text-black font-semibold tracking-wider'>{Nome}</p>
-      <div className="flex gap-4">
-        <Link href={Github}><BsGithub name={`Github do ${Nome}`} className='text-black ' /></Link>
-        <Link href={Linkedin}><BsLinkedin name={`Linkedin do ${Nome}`} className='text-black' /></Link>
-      </div>
+      <ul className="flex gap-4">
+        <li>
+          <Link href={Github}><BsGithub name={`Github do ${Nome}`} className='text-black ' /></Link>
+        </li>
+        <li>
+          <Link href={Linkedin}><BsLinkedin name={`Linkedin do ${Nome}`} className='text-black' /></Link>
+        </li>
+      </ul>
     </div>
   )
 }
