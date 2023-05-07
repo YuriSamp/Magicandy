@@ -16,7 +16,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@ui/*": ["./components/*"]
+      "@ui/*": ["./src/components/*"]
     }
   },
   "include": [
@@ -28,11 +28,11 @@
     "pages/index.tsx",
     "components/FormularioProduto/Formulario.tsx",
     "components/FormularioProduto/Formulario.tsx",
-    "utils/connect.ts",
+    "src/utils/connect.ts",
     "pages/api/seeds.ts",
     "pages/api/seeds.ts",
-    "services/connect.ts",
-    "services/connect.ts",
+    "src/services/connect.ts",
+    "src/services/connect.ts",
     "components/layout/Navbar/navbar.stories.mdx",
     "components/layout/Navbar/navbar.stories.mdx"
   ],
